@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAn2vLVeXXK2KK-htz7_PEDSrEKhMiRmKc" type="text/javascript"></script> -->
+	<link href="https://fonts.googleapis.com/css?family=Faustina|Trirong:200,200i,400,700" rel="stylesheet">
+	<link rel="stylesheet" href="http://www.news18.com/making-of-a-diaper-militant/css/n18.css">
+	<script type='text/javascript' src='https://www.gstatic.com/charts/loader.js'></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<style>
+		/*#main_container{display: none;}*/
+		#main_container{
+			display: flex;
+			overflow: hidden;
+		}
+		#chart_div path ,#chart_div2 path{
+			stroke-width:0;
+			stroke:#6699cc;
+		}
+		#chart_div>div ,#chart_div2>div{transform: scale(1.3);}
+		object.svgUtr {
+						left: 372.5px;
+		}
+		object#svg4 {
+	        left: 407px;
+		    top: 221px;
+		    height: 116px;
+		}
+		object#svg5,object#svg6 {
+
+		}
+		svg>g>g:last-child{
+			opacity: 0.7;
+			transform: scale(0.8);
+			transform-origin: 20px 200px;
+		}
+		object#svg5 {
+		    left: 16.4%;
+		    top: 55.4%;
+		}
+		.svgCont{
+			position: absolute;
+			left: 66.4%;
+			top: 55.4%;
+			width: 60px;
+		}
+		.svgCont:hover .clickOpen{
+			display: block;
+
+		}
+		.svgCont:hover .clickOpen p{
+			font-size: 16px !important;
+			line-height: 1;
+		}
+		#svg6{
+			height: 49px;
+		}
+		body,p,div,table,th,td,tr,input,span{
+			font-size: inherit;
+			margin: 0;
+			padding: 0;
+			font-family: inherit;
+
+		}
+		svg{
+			font-size: initial;
+			font-family: initial;
+		}
+		body{
+			font-family: 'Faustina', sans-serif;
+			height: initial !important;
+		}
+		table {
+		    width: 100%;
+		    text-align: left;
+		    margin-top: 40px;
+		    box-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+		}
+		table th{
+			font-size: 18px;
+		}
+		table td,table th{
+			padding: 5px;
+		}
+		table tr:nth-child(odd){
+			background:#EEE;
+		}
+		.posR{
+			position: relative;
+			height: 20px;
+			font-size: 12px;
+		}
+		.posR>span{
+			position: absolute;
+			right: 0;
+		}
+		section.textCont{
+			box-sizing: border-box;
+			padding: 32px 0 0 0;
+			max-width: 1040px;
+			margin: 0 auto;
+		}
+		section.textCont h2 {
+		    font-size: 40px;
+		    margin-bottom: 25px;
+		    font-weight: 700;
+		    letter-spacing: 1px;
+		}
+		section.textCont p {
+			font-size: 21px;
+			line-height: 1.6;
+			color: #363636;
+		}
+		.flexCont{
+			display: flex;
+		}
+		.posBto.flexCont{
+			position: relative;
+			z-index: 1;
+		}
+		.posBto.flexCont>div{
+			font-family: 'Trirong';
+			width: 50%;
+		    font-weight: bold;
+		    text-transform: uppercase;
+		    letter-spacing: 2px;
+		    text-align: center;
+		    position: absolute;
+		    top:30px;
+		}
+		.posBto.flexCont>div:last-child{
+			left:50%;
+		}
+		.flex-sec{
+			display: flex;
+			width: 100%;
+			box-sizing: border-box;
+			padding: 20px 10%;
+			min-height: 90vh;
+			overflow: hidden;
+		}
+		section.flex-sec.imgContSec{
+			padding: 5px 10%;
+		}
+		.flex-sec.fullHeight{
+			height: 100vh;
+		}
+		.flex-sec.fullWidth>div.width100{
+			margin: 0;
+		}
+		.imgCont.o1{
+			order: 1;
+			margin-right: 5px;
+		}
+		.imgCont.o2{
+			order: 2;
+		}
+		.width100{
+			box-sizing: border-box;
+			width: 100%;
+		}
+		.imgCont{box-sizing: border-box;}
+		.width64{
+			background: rgba(0,0,0,0.6);
+			width: 64%;
+		}
+		.width36{
+
+			background: rgba(0,0,0,0.2);
+			width: 36%;
+		}
+		.flex-sec.twoImgCont>div:first-child{
+			margin-right: 5px;
+		}
+		.flex-sec.twoImgCont>div:last-child{
+			margin-left: 5px;
+		}
+		.width50{
+			background: rgba(0,0,0,0.6);
+			width: 64%;
+
+		}
+		.width57{
+
+			background: rgba(0,0,0,0.2);
+			width: 57%;
+		}
+		.width43{
+			width: 43%;
+			background: rgba(135,135,135,0.9);
+		}
+		.pad0{
+			padding: 0;
+		}
+		.eachRam {
+		    height: 100px;
+		    width: 100px;
+		    outline: 1px solid #000;
+		    position: relative;
+		}
+		.eachRam .frontRam{
+			width: 100%;
+			height: 100%;
+			text-align: center;
+		}
+		.eachRam .hoverRam{
+			display: none;
+			position: absolute;
+			top: 120px;
+			background: #4d4d4d;
+			width: 306px;
+			padding: 15px;
+			color: #FFF;
+		}
+		.eachRam:hover .hoverRam{
+			display: block;
+		}
+		.eachRam .hoverRam.toRight{
+			right: 0;
+		}
+		.eachRam .hoverRam:before{
+			content: " ";
+		    position: absolute;
+		    display: block;
+		    width: 0;
+		    height: 0;
+		    top: -15px;
+		    border-left: 15px solid transparent;
+		    border-right: 15px solid transparent;
+		    border-bottom: 20px solid #4d4d4d;
+		}
+		.eachRam .hoverRam.toLeft:before{
+			left: 37px;
+		}
+		.eachRam .hoverRam.toRight:before{
+			right: 37px;
+		}
+		.ramInfo.flexCont{
+			justify-content: space-between;
+			padding-bottom: 100px;
+		}
+		.hoverRam p:last-child {
+			color: #FFF;
+		    font-size: 12px;
+		    line-height: 14px;
+		    margin-top: 10px;
+		    letter-spacing: 2px;
+		    text-transform: uppercase;
+		}
+		.hoverRam p:first-child {
+			color: #FFF;
+			font-family: 'Trirong';
+		    font-size: 23px;
+		}
+		.mainTextContent{
+			position: relative;
+			margin: 0 auto;
+			width: 68%;
+		}
+		.mainTextContent p:first-child{
+			margin-top: 0;
+		}
+		.indetnLeft {
+		    position: absolute;
+		    font-size: 300px;
+		    line-height: 0.5;
+		    transform: translateX(-100%);
+		    color:#a1a1a1;
+		}
+		.mainTextContent p{
+			margin: 50px 0;
+		}
+		.imgCont{
+			position: relative;
+			overflow: hidden;
+		}
+		.imgCont img{
+			position: absolute;
+			width: 100%;
+			left: 50%;
+			top: 50%;
+			transform: translateX(-50%) translateY(-50%);
+		}
+		.imgCont.tallImg img{
+			width: auto;
+			height: 100%;
+		}
+		.imgCont.wideImg img{
+			height: auto;
+			width: 100%;
+		}
+		.textCont .quoteCont{
+			font-family: 'Trirong';
+			width: 32%;
+			display: flex;
+			padding-bottom: 100px;
+		}
+		.textCont .quoteCont .quoteInner{
+			margin: 0 auto auto;
+		    border: 1px solid;
+		    padding: 25px 25px 80px 25px;
+		    text-align: center;
+		    position: relative;
+
+		}
+		section.flex-sec.fullWidth.pad0{
+			margin-top: 150px;
+		}
+		section.flex-sec.fullWidth.pad0:first-child{
+			margin: 0;
+		}
+		.textCont .quoteCont .quoteInner .quoteText{
+			font-size: 40px;
+			font-weight: 200;
+			line-height: 1.4;
+			letter-spacing: -1px;
+		}
+		.textCont .quoteCont .quoteInner.quoteInnerOthers {
+		    padding: 25px;
+		}
+		.centerQuoteIcon {
+		    position: absolute;
+		    height: 100px;
+		    width: 100px;
+		    border-radius: 50%;
+		    border: 1px solid;
+		    z-index: 1;
+		    background: #FFF;
+		    bottom: 0;
+		    left: 50%;
+		    transform: translate(-50%,50%);
+		    overflow:hidden;
+		    display: flex;
+		}
+		.centerQuoteIcon img{
+			width: 80px;
+			height: 80px;
+			margin: auto;
+		}
+		.pad_r_100{
+			padding-right: 100px;
+		}
+		span.centerQuoteName {
+		    position: absolute;
+		    bottom: -100px;
+		    width: 100%;
+		    left: 0;
+		    font-weight: 700;
+		    font-size: 12px;
+		}
+		span.centerQuoteName p{
+			font-size: 12px;
+			line-height: 1.4;
+			text-transform: uppercase;
+			letter-spacing: 4px;
+			font-size: 14px;
+			font-weight: bold;
+		}
+		#fixed_bg{
+			position: fixed;
+			z-index: -1;
+			padding: 0;
+			margin: 0;
+			height: 100vh;
+			width: 100vw;
+			background: url("./images/ramlila/Raj Kumar-05.jpg");
+			background-size: cover;
+		}
+		section.textCont.mainHeaderTextSec{
+			min-height: 120vh;
+			padding-top: 61vh;
+			color: #FFF;
+			text-align: center;
+			font-family: 'Trirong';
+			background: url('./images/Gunes-lead.jpg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			width: 100%;
+			max-width: 100%;
+		}
+		section.textCont.mainHeaderTextSec h1{
+			font-size: 11em;
+			line-height: 1;
+			letter-spacing: -10px;
+			font-weight: 400;
+			padding: 0;
+			font-style: normal;
+		}
+		section.textCont.mainHeaderTextSec p{
+			text-align: center;
+			font-size: 1.6em;
+			font-weight: 200;
+			max-width: 670px;
+			margin: 0 auto;
+			color: inherit;
+		}
+		.flex-sec.fullWidth.pad0{
+			overflow: hidden;
+		}
+		.innerImgCont {
+		    position: relative;
+		    width: 100%;
+		    height: 100%;
+		}
+		section.textCont h1 {
+		    font-size: 40px;
+		    font-weight: 100;
+		    font-family: Trirong;
+		    font-style: italic;
+		    line-height: 1;
+		    margin-bottom: 12px;
+		    text-transform: uppercase;
+		}
+		.frontRam img {
+		    max-height: 90%;
+		    margin: 5% auto;
+		}
+		span.centerQuoteName img {
+		    max-width: 100%;
+		    max-height: 14px;
+		    opacity: 0.5;
+		    transform: rotate(180deg);
+		}
+		section.dividerSec {
+		    transform: rotate(180deg);
+		    text-align: center;
+		    opacity: 0.3;
+		    height: 40px;
+		    margin-top: 40px;
+		}
+		div#chart_div5,div#chart_div4{
+			margin-top: 40px;
+		}
+		section.dividerSec img{
+			max-height: 100%;
+		}
+		.clickOpen {
+		    position: absolute;
+		    top: 0px;
+		    width: 165px;
+		    z-index: 100;
+		    background: #FFF;
+		    opacity: 0.7;
+		    font-family: Times;
+		    padding:8px;
+		    display: none;
+		}
+		span.centerQuoteName.centerQuoteNameOthers{
+			bottom: -80px;
+		}
+		.centerQuoteName.centerQuoteNameOthers p:last-child{
+			margin-top: 10px;
+		}
+		span.centerQuoteName.centerQuoteNameOthers span {
+		    font-style: italic;
+		    display: block;
+		    font-size: 11px;
+		    letter-spacing: 1px;
+		}
+		section.header {
+		    position: fixed;
+		    background: rgba(0,0,0,0.8);
+		    width: 100%;
+		    padding: 15px;
+		    color: #fff;
+		    transition: all 0.4s ease;
+		    z-index: 100;
+		}
+		section.textCont p.biggerText {
+		    font-size: 23px;
+		    line-height: 1.6;
+		}
+		section.header a{
+			color: #FFF;
+			text-decoration: none;
+			display: block;
+			width: 10%;
+			float: left;
+			text-align: center;
+			font-size: 16px;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+		}
+		.optionList:after{
+			content: " ";
+			display: block;
+			clear: both;
+		}
+		.eachRam .hoverRam i{
+			font-size: 10px;
+			opacity: 0.7;
+		}
+		.imgCaption {
+			padding: 10px 15px;
+		    position: absolute;
+		    background: rgba(0,0,0,0.6);
+		    z-index: 1;
+		    bottom: 0;
+		    left: 0;
+		    color: #000;
+		    line-height: 1.4;
+		    text-transform: uppercase;
+		    letter-spacing: 4px;
+		    font-size: 14px;
+		    font-weight: bold;
+		    opacity: 0;
+		    transition: all 1s ease-in-out;
+		}
+		.imgCont:hover .imgCaption{
+			color: #FFF;
+			opacity: 1;
+		}
+		.optionOpen{
+			display: none;
+			width: 64px;
+			cursor: pointer;
+		}
+		.optionOpen li {
+		    width: 40px;
+		    list-style: none;
+		    height: 1px;
+		    background: #FFF;
+		    margin: 10px 0;
+		}
+		.optionList{
+			display: block;
+		}
+		section.flex-sec.imgCont.finalFull {
+		    height: 100vh;
+		    width: 100vw;
+		    background: url('./images/ramlila/DSC_8309.jpg');
+		    background-size: cover;
+		}
+		#QUALITIES{margin: 0;}
+		section#fixed_bg img {display: none;}
+		.ramInfo.flexCont{display: flex}
+		.slickCont{display: none;}
+		.slider-for .slick-slide{
+			width: 310px;
+			background:999;
+		}
+		.textCont .quoteCont .quoteInner .quoteText span {
+		    font-size: 20px;
+		    display: block;
+		}
+		.slick-slide img {
+		    display: block;
+		    text-align: center;
+		    margin: 0 auto;
+		}
+		.slick-prev:before, .slick-next:before{
+			color: #4d4d4d;
+		}
+		.slider-for .hoverRam {
+		    width: 310px;
+		    margin: 20px auto 0;
+		    background: #4d4d4d;
+		    padding: 25px;
+		    position: relative;
+
+		}
+		.slider-for .hoverRam:before {
+		    content: " ";
+		    position: absolute;
+		    display: block;
+		    width: 0;
+		    height: 0;
+		    border-left: 15px solid transparent;
+		    border-right: 15px solid transparent;
+		    border-top: 20px solid #4d4d4d;
+		    transform: rotate(2700deg);
+		    top: -15px;
+		    left: 50%;
+
+		}
+		.imgNotCutTop{
+			left: 0 !important;
+		    top: 0 !important;
+		    transform: translateX(0) translateY(0) !important;
+		}
+		.mainodyContainer{
+			overflow: hidden;
+		}
+		.footer-bg.clearfix {
+		    background: rgba(0,0,0,0.8);
+		    color: #FFF;
+		    padding: 8px 15px;
+		    text-align: center;
+		    font-size: 12px;
+		    line-height: 1.6;
+		    box-sizing: border-box;
+		}
+		.footer-blog{
+			float: none;
+		}
+		.footer-blog p{background: transparent;}
+		.copys{
+			display: none;
+		}
+		section.textCont ul,section.textCont ul li{
+			font-size: 16px;
+		    line-height: 2;
+		    color: #363636;
+			font-style: italic;
+		}
+		#dataContainer{display: none;}
+		.share_box a {
+		    margin: 15px 38px;
+		}
+		.share_box {
+		    background: rgba(0,0,0,0.8);
+		    width: 300px;
+		    margin: 0 auto;
+		}
+		img.mob{
+			display: none;
+			width: 100%;
+		}
+		img.desktop{
+			display: block;
+		}
+		.posL{
+			display: block;
+		}
+		@media only screen and (max-width: 1000px) {
+			.footer-bg.clearfix p{
+				display: none;
+			}
+			.copys{
+				display: block;
+			}
+			section.flex-sec.imgContSec{
+				padding: 5px 3%;
+			}
+			.imgCont img {
+			    width: 100%;
+			    height: auto;
+			    position: relative;
+			    left: 0;
+			    top: 0;
+			    transform: translateX(0%) translateY(0%);
+			}
+
+
+			.ramInfo.flexCont{
+				display: none;
+			}
+			.slickCont{
+				display: block;
+			}
+			#fixed_bg{
+				background: rgba(0,0,0,0);
+			}
+			section#fixed_bg img {
+				display: block;
+			    position: absolute;
+			    height: 100%;
+			    width: auto;
+			    left: 50%;
+			    transform: translateX(-50%);
+			}
+			#header{
+				display: block !important;
+				opacity: 1 !important;
+
+			}
+			.mainTextContent p{
+				font-size: 21px;
+				line-height: 1.6;
+			}
+			.ramInfo.flexCont:after{
+				content: " ";
+				display: block;
+				clear: both;
+			}
+			.eachRam{
+				width: 50%;
+				float: left;
+				display: flex;
+				height: 150px;
+			}
+			.eachRam:last-child{
+				width: 100%;
+			}
+			.eachRam .frontRam{
+				width: 150px;
+			    float: left;
+			    display: flex;
+			}
+			.eachRam .hoverRam:before{
+				content: " ";
+			    position: absolute;
+			    display: block;
+			    width: 0;
+			    height: 0;
+			    top: -15px;
+			    border-left: 15px solid transparent;
+			    border-right: 15px solid transparent;
+			    border-bottom: 20px solid #FFF;
+			    transform: rotate(90deg);
+			    top: 50%;
+			    left: -15px !important;
+			}
+			.eachRam .hoverRam {
+			    position: relative;
+			    top:0;
+			    left:0;
+			    display: block;
+			    float: left;
+			    flex-grow: 1;
+			}
+
+			.flexCont{
+				display: block;
+			}
+			.textCont .quoteCont {
+			    width: 100%;
+			}
+			.mainTextContent.pad_r_100 {
+			    padding: 0;
+			    width: 90%;
+			}
+			.flex-sec.fullWidth.pad0 img,.imgCont.tallImg img {
+			    width: 100%;
+			    height: auto;
+			    position: relative;
+			    transform: translateX(0) translateY(0);
+			    left: 0;
+			    top: 0;
+			}
+			section.textCont{
+				padding: 20px 3%;
+			}
+			section.flex-sec{
+				padding: 5px 3%;
+				display: block;
+				min-height: auto;
+			}
+			section.flex-sec.twoImgCont{
+				padding: 5px 3%;
+				display: block;
+				min-height: auto;
+			}
+			.optionList{
+				display: none;
+			}
+			.optionOpen{
+				display: block;
+			}
+
+			.flex-sec.twoImgCont{
+				display: block;
+			}
+			.flex-sec.twoImgCont>div{
+				width: 100%;
+				height: auto;
+				margin: 20px 0;
+			}
+			section.header a{
+				display: block;
+			    width: 100%;
+			    text-align: left;
+			    padding: 24px 4px;
+			}
+			section.textCont.mainHeaderTextSec h1{
+				font-size: 13vw;
+				letter-spacing: -2px;
+			}
+		}
+		@media only screen and (max-width: 900px){
+			.posL{
+				display: none;
+			}
+			img.mob{
+				display: block;
+				width: 100%;
+			}
+			img.desktop{
+				display: none;
+			}
+			#dataContainer{
+				display: block;
+			}
+			#main_container{
+				display: none;
+				width: initial !important;
+				height: initial !important;
+			}
+			.flexCont.posBto{
+				display: none;
+			}
+			#main_container>div{
+				float: none;
+				width: 100% !important;
+			}
+			#chart_div>div, #chart_div2>div{
+				transform: scale(1);
+			}
+
+		}
+	</style>
+	<script type='text/javascript'>
+		function clickEv(){
+
+		};
+
+
+		$(document).ready(function() {
+
+
+			google.charts.load('upcoming', {'packages': ['geochart']});
+			google.charts.load('current', {'packages':['bar']});
+			google.charts.setOnLoadCallback(initMap);
+			var data;
+			var data1;
+			var opts;var opts1;
+			var geochart;
+			var geochart1;
+			function initMap() {
+				data = new google.visualization.DataTable();
+				data.addColumn('string', 'Code');
+				data.addColumn('string', 'Subdivision name');
+				data.addColumn('number', 'Total firearm deaths');
+				data.addRows([
+					['IN-AP' , 'Andhra Pradesh',8],
+					['IN-AR' , 'Arunachal Pradesh',6],
+					['IN-AS' , 'Assam',14],
+					['IN-BR' , 'Bihar',691],
+					['IN-CT' , 'Chhattisgarh',113],
+					['IN-DL', 'Delhi', null],
+					['IN-GA' , 'Goa',2],
+					['IN-GJ' , 'Gujarat',25],
+					['IN-HR' , 'Haryana',98],
+					['IN-HP' , 'Himachal Pradesh',3],
+					['IN-JK' , 'Jammu and Kashmir',52],
+					['IN-JH' , 'Jharkhand',654],
+					['IN-KA' , 'Karnataka',41],
+					['IN-KL' , 'Kerala',52],
+					['IN-MP' , 'Madhya Pradesh',476],
+					['IN-MH' , 'Maharashtra',114],
+					['IN-MN' , 'Manipur',40],
+					['IN-ML' , 'Meghalaya',2],
+					['IN-MZ' , 'Mizoram',4],
+					['IN-NL' , 'Nagaland',6],
+					['IN-OR' , 'Odisha',9],
+					['IN-PB' , 'Punjab',161],
+					['IN-RJ' , 'Rajasthan',115],
+					['IN-SK' , 'Sikkim',0],
+					['IN-TN' , 'Tamil Nadu',2],
+					['IN-TG' , 'Telangana',20],
+					['IN-TR' , 'Tripura',9],
+					['IN-UT' , 'Uttarakhand',14],
+					['IN-UP' , 'Uttar Pradesh',2155],
+					['IN-WB' , 'West Bengal',43],
+				]);
+				data1 = new google.visualization.DataTable();
+				data1.addColumn('string', 'Code');
+				data1.addColumn('string', 'Subdivision name');
+				data1.addColumn('number', 'Total Gun Licenses');
+				data1.addRows([
+					['IN-AP' , 'Andhra Pradesh',null],
+					['IN-AR' , 'Arunachal Pradesh',34394],
+					['IN-AS' , 'Assam',19283],
+					['IN-BR' , 'Bihar',82585],
+					['IN-CT' , 'Chhattisgarh',null],
+					['IN-DL', 'Delhi', null],
+					['IN-GA' , 'Goa',null],
+					['IN-GJ' , 'Gujarat',60784],
+					['IN-HR' , 'Haryana',141926],
+					['IN-HP' , 'Himachal Pradesh',77069],
+					['IN-JK' , 'Jammu and Kashmir',369191],
+					['IN-JH' , 'Jharkhand',17654],
+					['IN-KA' , 'Karnataka',113631],
+					['IN-KL' , 'Kerala',9459],
+					['IN-MP' , 'Madhya Pradesh',247130],
+					['IN-MH' , 'Maharashtra',84050],
+					['IN-MN' , 'Manipur',26836],
+					['IN-ML' , 'Meghalaya',18688],
+					['IN-MZ' , 'Mizoram',15895],
+					['IN-NL' , 'Nagaland',36606],
+					['IN-OR' , 'Odisha',20588],
+					['IN-PB' , 'Punjab',359349],
+					['IN-RJ' , 'Rajasthan',133968],
+					['IN-SK' , 'Sikkim',null],
+					['IN-TN' , 'Tamil Nadu',22532],
+					['IN-TG' , 'Telangana',null],
+					['IN-TR' , 'Tripura',null],
+					['IN-UT' , 'Uttarakhand',64770],
+					['IN-UP' , 'Uttar Pradesh',1277914],
+					['IN-WB' , 'West Bengal',60525],
+				]);
+				opts = {
+					'chartArea': {'width': '100%', 'height': '100%'},
+					region: 'IN',
+
+					domain:'IN',
+					displayMode: 'regions',
+					resolution: 'provinces',
+					//height: '700px',
+					defaultColor:"#d2d2d2",
+					datalessRegionColor:"#FFF",
+					animation:{
+						startup:'true',
+						duration:2000,
+						easing:'out'
+					},
+					region_type:'instates',
+					tooltip: { trigger: 'selection' },
+					legend:false,
+
+					colorAxis:{colors: ['#fcbc86', '#9e0b0f']},
+				};
+				opts1 = {
+					'chartArea': {'width': '100%', 'height': '100%'},
+					region: 'IN',
+
+					domain:'IN',
+					displayMode: 'regions',
+					resolution: 'provinces',
+					tooltip: { trigger: 'selection' },
+					defaultColor:"#d2d2d2",
+					datalessRegionColor:"#FFF",
+					animation:{
+						startup:'true',
+						duration:2000,
+						easing:'out'
+					},
+					region_type:'instates',
+
+					legend:false,
+					colorAxis:{colors: ['#92c5eb', '#002e6e']},
+
+
+				};
+				geochart = new google.visualization.GeoChart(
+					document.getElementById('chart_div')
+				);
+				geochart.draw(data, opts);
+				geochart1 = new google.visualization.GeoChart(
+					document.getElementById('chart_div2')
+				);
+				geochart1.draw(data1, opts1);
+				google.visualization.events.addListener(geochart1, 'select', function () {
+					var selection = geochart1.getSelection();
+
+					geochart.setSelection(selection);
+				});
+				google.visualization.events.addListener(geochart, 'select', function () {
+
+					var selection = geochart.getSelection();
+
+					if (selection.length>0) {
+						if (selection[0].row==0 || selection[0].row==12 || selection[0].row==15 || selection[0].row==24) {
+							$('.svgCont').css('zIndex', -1);
+						}else{
+							$('.svgCont').css('zIndex', 1);
+						}
+
+					}else {
+
+						$('.svgCont').css('zIndex', 1);
+					}
+					geochart1.setSelection(selection);
+				});
+
+
+
+				function drawMultSeries() {
+					var data = new google.visualization.arrayToDataTable([
+						['Year','Victims of murder by firearms','Victims of murder by unlicensed firearms'],
+						['2011',3368,2964],
+						['2012',3781,3458],
+						['2013',3621,3297],
+						['2014',3655,3115],
+						['2015',3722,3366]
+					]);
+					var options = {
+						height:400,
+						chart: {
+							title: 'Yearwise victims',
+							subtitle: '',
+						},
+						series:{
+							0:{visibleInLegend: false},
+							1:{visibleInLegend: false}
+						}
+					};
+
+					var chart = new google.charts.Bar(document.getElementById('chart_div3'));
+					chart.draw(data, google.charts.Bar.convertOptions(options));
+				};
+				drawMultSeries();
+				function drawBarChart() {
+					var data = new google.visualization.arrayToDataTable([
+						['Top five states','Illegal gun seizures'],
+						["Uttar Pradesh",31160],
+						["West Bengal",6635],
+						["Madhya Pradesh",5161],
+						["Rajasthan",5091],
+						["Haryana",3162]
+					]);
+					var chartW;var chartH;
+					if ($(window).width<1000) {
+
+					}
+
+					var options = {
+						height:400,
+						chart: {
+							title: 'Statewise Illegal gun seizures',
+							subtitle: '',
+						},
+						series:{
+							0:{visibleInLegend: false}
+						}
+
+					};
+
+					var chart = new google.charts.Bar(document.getElementById('chart_div5'));
+					chart.draw(data, google.charts.Bar.convertOptions(options));
+				};
+				drawBarChart();
+			};
+
+		});
+	</script>
+</head>
+<body>
+	<header>
+		<div class="logo-pcake">
+			<span class="pancake-holder"><a class="pancake"></a></span>
+			<a href="http://www.news18.com" class="logo"><img src="http://static.ibnlive.in.com/pix/ibnhome/news18/anatomy-army/news18-logo.png" alt=""></a>
+		</div>
+
+		<a href="javscript:void(0)" class="sprite-img shareicon"></a>
+		<div class="menue">
+			<a href="#top" class="act"></a>
+		</div>
+
+		<div class="sharebox">
+			<a href="http://www.facebook.com/sharer.php?u=http://www.news18.com/news/immersive/making-of-a-diaper-militant-in-kashmir.html&amp;t=The Making of A 'Diaper Militant'  #KashmirBeyondCliches" target="_blank" class="sprite-img hfbicon"></a>
+			<a href="http://twitter.com/share?text=The Making of A 'Diaper Militant'  #KashmirBeyondCliches&amp;url=http://www.news18.com/news/immersive/making-of-a-diaper-militant-in-kashmir.html" target="_blank" class="sprite-img htwicon"></a>
+			<a href="https://plus.google.com/share?url=http%3A//www.news18.com/news/making-of-a-diaper-militant-in-kashmir.html" class="sprite-img hgpicon"></a>
+			<a href="http://www.news18.com/news/immersive/making-of-a-diaper-militant-in-kashmir.html" class="sprite-img waicon"></a>
+
+		</div>
+		<nav>
+
+			<ul>
+				<li><a href="http://www.news18.com/" target="_blank">Home</a></li>
+				<li><a href="http://www.news18.com/india/" target="_blank">India</a></li>
+				<li><a href="http://www.news18.com/politics/" target="_blank">Politics</a></li>
+				<li><a href="http://www.news18.com/movies/" target="_blank">Movies</a></li>
+				<li><a href="http://www.news18.com/tech/" target="_blank">Tech</a></li>
+				<li><a href="http://www.news18.com/auto/" target="_blank">Cars18</a></li>
+				<li><a href="http://www.news18.com/ivideos/" target="_blank">iVideos</a></li>
+				<li><a href="http://www.news18.com/cricketnext/" target="_blank">Cricketnext</a></li>
+				<li><a href="http://www.news18.com/sports/" target="_blank">Sports</a></li>
+				<li class="border-btm"><a href="http://compareindia.news18.com/" target="_blank">CompareIndia</a></li>
+
+				<li class="mlink"><a href="http://www.news18.com/news/" target="_blank">Latest </a></li>
+
+				<li class="mlink"><a href="http://www.news18.com/photogallery/" target="_blank">Photos </a></li>
+				<li class="mlink"><a href="http://www.news18.com/lifestyle/" target="_blank">Lifestyle </a></li>
+				<li class="mlink"><a href="http://www.news18.com/world/" target="_blank">World </a></li>
+				<li class="mlink"><a href="http://www.news18.com/business/" target="_blank">Business </a></li>
+				<li class="mlink"><a href="http://www.news18.com/buzz/" target="_blank">Buzz </a></li>
+
+			</ul>
+		</nav>
+
+	</header>
+
+
+	<section class="textCont mainHeaderTextSec" >
+		<div class="mainHeaderText">
+			<h1 style="text-shadow: 2px 0px rgba(0, 0, 0,0);">GUNTANTRA</h1>
+			<p style="font-size: 2em;line-height: 1.4;margin-top: 10px;">India's gun laws may be among the strictest in the world, but does that deter us from owning them?</p>
+
+			<p style="font-weight: 600;text-transform: uppercase;letter-spacing: 2px;font-size: 20px;margin-top: 20px;">Rashmi Singh </p>
+		</div>
+	</section>
+
+	<section class="textCont">
+
+		<p>With 273 mass shootings in 275 days this year, it's difficult to believe that the Las Vegas mass shooting -the deadliest in recent years - will be the last. And despite a string of such cases, the unrestricted access to guns continues.</p>
+		<br>
+		<p>Stephen Paddock, the Las Vegas shooter, was found to have acquired 47 guns, including rifles and semi-autos. He lived in a state (Nevada) where buyers don't need permits to buy assault weapons.</p>
+		<br>
+		<p>The picture is different in India, which has one of the strictest gun laws in the world. Here, acquiring firearms is a privilege and not a constitutional right (like in the US). In fact, Arms Rules, 2016, makes licences necessary, even for air guns. The process of procuring licences though, is difficult and often takes months. They are granted only after a thorough assessment, including background checks.</p>
+		<br>
+		<p>The Sydney University <a href="http://www.gunpolicy.org/firearms/home" target="_blank">database</a> on guns puts the rate of private gun ownership per 100 Indians at 3.4. That's a paltry number compared with 101 guns per 100 Americans - that's more guns than people!</p>
+		<br>
+		<p>India might not be trigger happy but it has its own misfiring when it comes to gun ownership. One, strict gun laws restrict access to licenced weapons but unlicenced firearms form about 85% of the civilian-owned stockpile. Second, India too has its 'gun hubs' - areas with a higher gun ownership and fatalities.</p>
+
+
+	</section>
+	<section class="textCont infgrCont">
+		<h1><b>INDIA'S GUN HUBS</b></h1>
+		<p>It's difficult to put a number on the unlawfully held guns, but a look at the licence status of firearm seizures made in the past gives a clear picture of how prevalent unlicenced guns are. Sixty percent of more than 100,000 firearms seized in India between 2014 and 2015 were found to be unlicenced, with Uttar Pradesh accounting for most of it.</p>
+
+		<div id="chart_div5" style="width: 100%;"></div>
+		<div class="posR"><span><i>Source: Lok Sabha reply</i></span></div>
+
+		<p style="margin-bottom: 40px;">Worryingly, the recently-released home ministry data on active gun licenses reveals that UP trumps other states in terms of licenced weapons as well. Home to 16% of the country's population, the state accounts for 38% of the 33.7 lakh active gun licenses in the country, emerging as India's gun hub.</p>
+
+		<img src="./images/gunsup.jpg" alt="" class="desktop">
+		<img src="./images/gunsup2.jpg" alt="" class="mob">
+		<div class="posR"><span><i>*Till Dec, 2016; rest for 2015</i></span></div>
+	</section>
+	<section class="textCont">
+		<h1><b>ARMED AND DANGEROUS</b></h1>
+		<p>With just about 10 in 100 homicides using guns, Indians are less likely to be killed by firearms. But more than 90% of deaths by firearms have been caused using an unlawfully-held weapon- a trend noticed year after year.</p>
+		<br>
+		<p>Crimes like mass shootings are rarely heard of in India, but gun violence in road rage cases is not. While strict gun laws do succeed in restricting access to guns to an extent, but illegal gun ownership is a matter of concern.</p>
+
+		<div id="chart_div3"></div>
+		<div class="posR"><span><i>Source: NCRB</i></span></div>
+
+	</section>
+	<section class="textCont">
+		<h1><b>More guns mean more gun deaths</b></h1>
+		<p style="margin-top: 20px;">Data also establishes, that Indian states with higher gun ownership figures, are also more likely to see higher gun fatalities.</p>
+		<div class="flexCont posBto">
+			<div>Active gun licences</div>
+			<div>Deaths caused by firearms </div>
+		</div>
+		<div id="main_container" style="position: relative;width: 900px; height: 500px;margin:0 auto;">
+			<div id="chart_div2" style="width: 50%;margin:0;"></div>
+			<div id="chart_div" style="width: 50%;margin:0;"></div>
+
+	 		<!-- <object class="svgUtr" id="svg5" data="images/Telangana.svg" type="image/svg+xml" fill="#FFF000"></object> -->
+	 		<div class="svgCont">
+	 			<div class="clickOpen">
+	 				<p><b>Telangana</b></p>
+	 				<p>Total firearm deaths: <b>19</b></p>
+	 			</div>
+	 			<object class="svgUtr" id="svg6" data="./images/Telangana.svg" type="image/svg+xml" fill="#FFF000" ></object>
+	 		</div>
+		</div>
+		<div id="dataContainer">
+			<table>
+				<tr>
+					<th>States</th>
+					<th>Active licenses</th>
+					<th>Total firearm deaths</th>
+				</tr>
+				<tr>
+					<td>Andhra Pradesh</td>
+					<td>-</td>
+					<td>8</td>
+				</tr>
+				<tr>
+					<td>Arunachal Pradesh</td>
+					<td>34,394</td>
+					<td>6</td>
+				</tr>
+				<tr>
+					<td>Assam</td>
+					<td>19,283</td>
+					<td>14</td>
+				</tr>
+				<tr>
+					<td>Bihar</td>
+					<td>82,585</td>
+					<td>691</td>
+				</tr>
+				<tr>
+					<td>Chhattisgarh</td>
+					<td>-</td>
+					<td>113</td>
+				</tr>
+				<tr>
+					<td>Goa</td>
+					<td>-</td>
+					<td>2</td>
+				</tr>
+				<tr>
+					<td>Gujarat</td>
+					<td>60,784</td>
+					<td>25</td>
+				</tr>
+				<tr>
+					<td>Haryana</td>
+					<td>1,41,926</td>
+					<td>98</td>
+				</tr>
+				<tr>
+					<td>Himachal Pradesh</td>
+					<td>77,069</td>
+					<td>3</td>
+				</tr>
+				<tr>
+					<td>Jammu & Kashmir</td>
+					<td>3,69,191</td>
+					<td>52</td>
+				</tr>
+				<tr>
+					<td>Jharkhand</td>
+					<td>17,654</td>
+					<td>654</td>
+				</tr>
+				<tr>
+					<td>Karnataka</td>
+					<td>1,13,631</td>
+					<td>41</td>
+				</tr>
+				<tr>
+					<td>Kerala</td>
+					<td>9,459</td>
+					<td>52</td>
+				</tr>
+				<tr>
+					<td>Madhya Pradesh</td>
+					<td>2,47,130</td>
+					<td>476</td>
+				</tr>
+				<tr>
+					<td>Maharashtra</td>
+					<td>84,050</td>
+					<td>114</td>
+				</tr>
+				<tr>
+					<td>Manipur</td>
+					<td>26,836</td>
+					<td>40</td>
+				</tr>
+				<tr>
+					<td>Meghalaya</td>
+					<td>18,688</td>
+					<td>2</td>
+				</tr>
+				<tr>
+					<td>Mizoram</td>
+					<td>15,895</td>
+					<td>4</td>
+				</tr>
+				<tr>
+					<td>Nagaland</td>
+					<td>36,606</td>
+					<td>6</td>
+				</tr>
+				<tr>
+					<td>Odisha</td>
+					<td>20,588</td>
+					<td>9</td>
+				</tr>
+				<tr>
+					<td>Punjab</td>
+					<td>359,349</td>
+					<td>161</td>
+				</tr>
+				<tr>
+					<td>Rajasthan</td>
+					<td>1,33,968</td>
+					<td>115</td>
+				</tr>
+				<tr>
+					<td>Sikkim</td>
+					<td>-</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>Tamil Nadu</td>
+					<td>22,532</td>
+					<td>2</td>
+				</tr>
+				<tr>
+					<td>Telangana</td>
+					<td>-</td>
+					<td>20</td>
+				</tr>
+				<tr>
+					<td>Tripura</td>
+					<td>-</td>
+					<td>9</td>
+				</tr>
+				<tr>
+					<td>Uttar Pradesh</td>
+					<td>12,77,914</td>
+					<td>2,155</td>
+				</tr>
+				<tr>
+					<td>Uttarakhand</td>
+					<td>64,770</td>
+					<td>14</td>
+				</tr>
+				<tr>
+					<td>West Bengal</td>
+					<td>60,525</td>
+					<td>43</td>
+				</tr>
+			</table>
+		</div>
+		<div class="posR"><span><i>As in Dec, 2016; source: Home Ministry</i></span></div>
+		<div class="posL"><span>Click on a state to view details</span></div>
+	</section>
+	<section class="textCont infgrCont">
+
+
+		<p style="margin-top: 20px;">India too has its pro-gun lobby. There are voices that argue that guns don't kill people. That easy access to legal guns may reduce illegal firearm sales. The argument may have weight, but one things is clear: Legal or illegal, more guns mean more gun deaths.</p>
+	</section>
+	<div>
+		<div>
+			<share class="shareCont">
+
+				<div class="share_box">
+					<a href="http://www.facebook.com/sharer.php?u=http://www.news18.com/news/immersive/making-of-a-diaper-militant-in-kashmir.html&amp;t=The Making of A 'Diaper Militant'" target="_blank" class="sprite-img hfbicon"></a>
+					<a href="http://twitter.com/share?text=The Making of A 'Diaper Militant'&amp;url=http://www.news18.com/news/immersive/making-of-a-diaper-militant-in-kashmir.html" target="_blank" class="sprite-img htwicon"></a>
+					<a href="https://plus.google.com/share?url=http%3A//www.news18.com/news/making-of-a-diaper-militant-in-kashmir.html" class="sprite-img hgpicon"></a>
+					<!-- <a href="http://www.news18.com/news/immersive/making-of-a-diaper-militant-in-kashmir.html" class="sprite-img waicon"></a> -->
+
+				</div>
+			</share>
+		</div>
+	</div>
+	<div class="footer-bg clearfix "> <div class="footer_div"> <div class="footer-blog"> <div class="copys">© Copyright Network18 Media and Investments Ltd 2017. All rights reserved.</div> <p><span class="disclaimer">CNN name, logo and all associated elements ® and © 2017 Cable News Network LP, LLLP. A Time Warner Company. All rights reserved. CNN and the CNN logo are registered marks of Cable News Network, LP LLLP, displayed with permission. Use of the CNN name and/or logo on or as part of News18.com does not derogate from the intellectual property rights of Cable News Network in respect of them. </span> © Copyright Network18 Media and Investments Ltd 2017. All rights reserved.</p> </div> </div> </div>
+
+		<script>
+		        	$(document).ready(function(){
+
+		        	var bgColor;
+		        	var effect = 'animated bounceIn'; /* bounceIn, bounceInUp, bounceInDown, bounceInLeft,
+		        											 bounceInRight, rotateIn, rotateInUpLeft, rotateInDownLeft,
+		        											 rotateInUpRight, rotateInDownRight  */
+
+		        	$('.all-content').hide();
+
+		        	/**
+		        	*
+		        	* Click list
+		        	*
+		        	**/
+		        	$('.content li').click(function(){
+
+		        		/* Hide Card Front & Card Back from all lists */
+		        		$('.card-front, .card-back').hide();
+
+		        		/* Remove Class active, Hide and Adding border: none to the lists */
+		        		$('.content li').removeClass('active').hide().css('border','none');
+		        		$(this).addClass('active').show();
+
+		        		/* Get Background Color */
+		        		bgColor = $('.active .card-back').css('background-color');
+		        		$('.content').css('background-color',bgColor);
+
+		        		/* Show Close Element & Content of list */
+		        		$('.close, .all-content').show();
+
+		        		/* Append close element and Add CSS effect "bounceInLeft"*/
+		        		$('.responsive').append('<span class="close">close</span>').addClass(effect);
+
+		        	});
+
+
+		        	/**
+		        	*
+		        	* Close element
+		        	*
+		        	**/
+		        	$('.responsive').on('click', '.close', function(){
+
+		        		/* Remove close button */
+		        		$('.close').remove();
+
+		        		/* Get Background Color */
+		        		bgColor = $('.active .card-front').css('background-color');
+
+		        		/* Remove animation effect from ul.content */
+		        		$('.responsive').removeClass(effect);
+
+		        		/* Hide Close Element & Content of list */
+		        		$('.all-content').hide();
+
+		        		/*  Remove "active" class from all lists and adding "bounceInLeft" */
+		        		$('.content li').removeClass('active').show().css({ 'border-bottom':'1px solid #2c2c2c',
+		        														    'border-left':'1px solid #2c2c2c' });
+
+		        		$('.card-front, .card-back').show();
+		        		$('.content').css('background-color',bgColor);
+
+		        	});
+
+
+		        	});
+
+
+		        	$(document).ready(function(){
+		        		$('.pancake-holder').on('click', function(){
+		        			$('nav').toggle(500);
+		        			$('.pancake-holder a').toggleClass('pctoggle')
+		        		});
+
+		        	$('.photogallery').on('click', function(e){
+		        		e.preventDefault();
+		        		$('.pglight-box').show();
+		        	});
+		        		$('.close').on('click', function(){
+		        			$('.pglight-box').hide();
+		        		});
+		        	var contener=$("ul.pgbox");
+		        	var wdth=$('.over-hdn').width();
+		        	var count=0;
+		        	var li_width=contener.find("li").width();
+		        	var totel_li=contener.find("li").length; /* total li contener width*/
+		        	$("a.pgclick").click(function(e){
+		        			e.preventDefault();
+		        		var dir=$(this).data("dir")
+		        		  if(dir=="right"){
+		        		  count=count+1;
+		        		  }
+		        		  else{
+		        		  count=count-1;
+		        		  }
+		        		  if(count <0 || count>=totel_li){
+		        			  count=0;
+		        			  }
+		        		  contener.animate({marginLeft:'-'+count*wdth+'%'},500);
+		        		  });
+
+		        	var slider=$(".sliderbox ul");
+		        	var slcount=0;
+		        	var slli_height=slider.find("li").height();
+		        	var sltotel_li=slider.find("li").length; /* total li contener width*/
+		        	$(".slclick").click(function(e){
+		        			e.preventDefault();
+		        		var drs=$(this).data("type")
+		        		  if(drs=="up"){
+		        		  slcount=slcount-1;
+		        		  }
+		        		  else{
+		        		  slcount=slcount+1;
+		        		  }
+		        		  if(slcount <0 || slcount>=sltotel_li){
+		        			  slcount=0;
+		        			  }
+		        		  slider.animate({marginTop:'-'+slcount*slli_height+'px'},500);
+		        		  });
+
+		        	var pcontener=$("#pgbox");
+		        	var pcount=0;
+		        	var pli_width=pcontener.find("li").width();
+		        	//alert(pli_width);
+		        	var ptotel_li=pcontener.find("li").length; /* total li contener width*/
+		        	$(".pclick").click(function(e){
+		        			e.preventDefault();
+		        		var dir=$(this).data("type")
+		        		//alert(dir);
+		        		  if(dir=="right"){
+		        		  pcount=pcount-1;
+		        		  }
+		        		  else{
+		        		  pcount=pcount+1;
+		        		  }
+		        		  if(pcount <0 || pcount>=ptotel_li){
+		        			  pcount=0;
+		        			  }
+		        		  pcontener.animate({marginLeft:'-'+pcount*pli_width+'px'},500);
+		        		  });
+
+		        	var vcontener=$("#vgbox");
+		        	var vcount=0;
+		        	var vli_width=pcontener.find("li").width();
+		        	//alert(pli_width);
+		        	var vtotel_li=vcontener.find("li").length; /* total li contener width*/
+		        	$(".vclick").click(function(e){
+		        			e.preventDefault();
+		        		var dir=$(this).data("type")
+		        		//alert(dir);
+		        		  if(dir=="right"){
+		        		  vcount=vcount-1;
+		        		  }
+		        		  else{
+		        		  vcount=vcount+1;
+		        		  }
+		        		  if(vcount <0 || vcount>=vtotel_li){
+		        			  vcount=0;
+		        			  }
+		        		  vcontener.animate({marginLeft:'-'+vcount*vli_width+'px'},500);
+		        		  });
+		        	$('.mnav').on('click', function(){
+		        		$('header .menue').toggle();
+		        	});
+
+		        	$('.shareicon').on('click', function(){
+		        		$('header .sharebox').toggle();
+		        	});
+
+		        	$('.video-box').on('click', function(){
+		        		$('.utvideo').show();
+		        	});
+		        	$('.utvideo').on('click', function(){
+		        		$(this).hide();
+		        	});
+
+
+
+		        	  $(".proicon").click(function() {
+		        	$(".rprtrs-bg").toggleClass("adrptrs");
+		        	$("body").addClass("ovrdn");
+		        	});
+
+		        	 $(".close-rptrs").click(function() {
+		        	$(".rprtrs-bg").toggleClass("adrptrs");
+		        	$("body").removeClass("ovrdn");
+		        	});
+
+
+		        	});
+
+
+
+
+
+
+		        	jQuery(document).ready(function ($) {
+			        	$('a').click(function(){
+			        	    $('html, body').animate({
+			        	        scrollTop: $( $(this).attr('href') ).offset().top
+			        	    }, 500);
+			        	    return false;
+			        	});
+
+		        	});
+
+		        </script>
+
+</body>
+</html>

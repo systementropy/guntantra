@@ -1,0 +1,1768 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="main"
+   version="1.1"
+   width="4559.29160000001px"
+   height="4342.98368652127px"
+   preserveAspectRatio="none"
+   viewBox="0 0 4559.29160000001 4342.98368652127"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="map.svg">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview444"
+     showgrid="false"
+     inkscape:zoom="0.054340519"
+     inkscape:cx="2279.6458"
+     inkscape:cy="2171.4919"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="marginalia" />
+  <!--
+
+      Copyright (c) 2014 OpenStreetMap
+      www.openstreetmap.org
+      This work is licensed under the
+      Creative Commons Attribution-ShareAlike 2.0 License.
+      http://creativecommons.org/licenses/by-sa/2.0/
+
+    -->
+  <metadata
+     id="metadata">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/2.0/" />
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+        <dc:date>2014-05-19</dc:date>
+        <dc:source>http://www.openstreetmap.org/</dc:source>
+      </cc:Work>
+      <cc:License
+         rdf:about="http://creativecommons.org/licenses/by-sa/2.0/">
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Reproduction" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/Distribution" />
+        <cc:permits
+           rdf:resource="http://web.resource.org/cc/DerivativeWorks" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/Notice" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/Attribution" />
+        <cc:requires
+           rdf:resource="http://web.resource.org/cc/ShareAlike" />
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs-rulefile">
+    <style
+       id="styles"
+       type="text/css">
+            .debug {
+                stroke-width: 0.1px;
+                stroke-linecap: round;
+                stroke: gray;
+                /* marker-end: url(#segment-direction); */
+            }
+
+            .error {
+                stroke-width: 2px;
+                stroke-linecap: round;
+                stroke: red;
+            }
+
+            .untagged-segments {
+                stroke-width: 0.5px;
+                stroke-linejoin: round;
+                stroke-linecap: butt;
+                stroke: #e0e0e0;
+                stroke-dasharray: 0.5,0.5;
+            }
+            
+           
+            /* State specific fill and stroke */
+            .state-stroke {
+		stroke: #222222;
+		stroke-width: 20px;
+		stroke-opacity: 1.0;
+		stroke-linejoin: round;
+		stroke-linecap: butt;
+		fill: #C87B79; 
+            }
+	    .state-fill {
+                fill: #a29fa7;
+                fill-opacity: 0.8;
+            }
+	    .district-inside-fill {
+                fill: #bbbbbb;
+                fill-opacity: 0.4;
+            }         
+
+            /* Bridge casing */
+            .bridge-casing-35 {
+                stroke-width: 13px;
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                stroke: #222222;
+                fill: #C87B79;
+                marker-start: url(#bridge-casing-start);
+                marker-end: url(#bridge-casing-end);
+            }
+
+            .bridge-casing-30 {
+                stroke-width: 12px;
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                stroke: #222222;
+                fill: #C87B79;
+                marker-start: url(#bridge-casing-start);
+                marker-end: url(#bridge-casing-end);
+            }
+
+            .bridge-casing-25 {
+                stroke-width: 10px;
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                stroke: #222222;
+                fill: #C87B79;
+                marker-start: url(#bridge-casing-start);
+                marker-end: url(#bridge-casing-end);
+            }
+
+            .bridge-casing-20 {
+                stroke-width: 2px;
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                stroke: #222222;
+                fill: #C87B79;
+                marker-start: url(#bridge-casing-start);
+                marker-end: url(#bridge-casing-end);
+            }
+
+            .bridge-casing-15 {
+                stroke-width: 1.5px;
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                stroke: #222222;
+                fill: #C87B79;
+                marker-start: url(#bridge-casing-start);
+                marker-end: url(#bridge-casing-end);
+            }
+
+            .bridge-casing-10 {
+                stroke-width: 1px;
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                stroke: #222222;
+                fill: #C87B79;
+                marker-start: url(#bridge-casing-start);
+                marker-end: url(#bridge-casing-end);
+            }
+
+
+            /* Bridge core */
+            .bridge-core-35 {
+                stroke-width: 14;
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                stroke: #fcfcfc;
+                fill: #C87B79;
+            }
+
+            .bridge-core-30 {
+                stroke-width: 12px;
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                stroke: #fcfcfc;
+                fill: #C87B79;
+            }
+
+            .bridge-core-25 {
+                stroke-width: 9px;
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                stroke: #fcfcfc;
+                fill: #C87B79;
+            }
+
+            .bridge-core-20 {
+                stroke-width: 1.5px;
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                stroke: #fcfcfc;
+                fill: #C87B79;
+            }
+
+            .bridge-core-15 {
+                stroke-width: 1.25px;
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                stroke: #fcfcfc;
+                fill: #C87B79;
+            }
+
+            .bridge-core-10 {
+                stroke-width: 0.75px;
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                stroke: #fcfcfc;
+                fill: #C87B79;
+            }
+
+
+            /* Tunnels */
+            .tunnel-casing {
+                stroke-width: 2px;
+                stroke-dasharray: 0.01,100000;
+                stroke: #222222;
+                fill: #C87B79;
+            }
+
+            /* Highways - generic style */
+            .highway-casing {
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                fill: #C87B79;
+            }
+
+            .highway-core {
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                fill: #C87B79;
+            }
+
+            .highway-motorway-junction {
+            fill: yellow;
+            stroke: #4D5D73;
+            stroke-width: 3px;
+            }
+
+            .highway-motorway-junction-caption {
+            fill: black;
+            stroke: blue;
+            stroke-width: 0.2px;
+            font-family: &quot;DejaVu Sans&quot;,sans-serif;
+            font-size: 10px;
+            font-weight: bold;
+            display: none;
+            }
+
+            .highway-ref {
+                fill: #666666;
+                stroke: white;
+                font-family: &quot;DejaVu Sans&quot;,sans-serif;
+                font-weight: normal;
+            }
+
+            .highway-name {
+                fill: black;
+                font-family: &quot;DejaVu Sans&quot;,sans-serif;
+                font-weight: normal;
+                stroke: white;
+             }
+
+
+            /* Highways - street specific style */
+            .highway-motorway-casing {
+                stroke-width: 9px;
+                stroke: #e46d71;
+            }
+
+            .highway-motorway-core {
+                stroke-width: 9px;
+                stroke: #e46d71;
+            }
+
+            .highway-motorway-link-casing {
+                stroke-width: 6px;
+                stroke: #e46d71;
+            }
+
+            .highway-motorway-link-core {
+                stroke-width: 5px;
+                stroke: #e46d71;
+            }
+
+            .highway-trunk-casing {
+                stroke-width: 8px;
+                stroke: #e46d71;
+            }
+
+            .highway-trunk-core {
+                stroke-width: 7px;
+                stroke: #e46d71;
+            }
+
+            .highway-primary-casing {
+                stroke-width: 6px;
+                stroke: #e46d71;
+            }
+
+            .highway-primary-core {
+                stroke-width: 5px;
+                stroke: #e46d71;
+            }
+
+            .highway-secondary-casing {
+                stroke-width: 5px;
+                stroke: #e46d71;
+            }
+
+            .highway-secondary-core {
+                stroke-width: 4.5px;
+                stroke: #e46d71;
+            }
+
+            .highway-tertiary-casing {
+                stroke-width: 3.5px;
+                stroke: #e46d71;
+            }
+
+            .highway-tertiary-core {
+                stroke-width: 2.5px;
+                stroke: #e46d71;
+            }
+
+            .highway-unclassified-casing {
+                stroke-width: 2px;
+                stroke: #e46d71;
+            }
+
+            .highway-unclassified-core {
+                stroke-width: 1.5px;
+                stroke: #e46d71;
+            }
+
+            .highway-road-core {
+                stroke-width: 1.2px;
+                stroke: #d0d0d0;
+            }
+
+            .highway-unsurfaced-casing {
+                stroke-width: 1.5px;
+                stroke: #222222;
+                stroke-dasharray: 1px, .5px;
+            }
+
+            .highway-unsurfaced-core {
+                stroke-width: 1.2px;
+                stroke: #ffffff;
+            }
+
+            .highway-track-casing {
+                stroke-width: 1.5px;
+                stroke: #d79331;
+            }
+
+            .highway-track-core {
+                stroke-width: 1.2px;
+                stroke: #ffffff;
+            }
+
+            .highway-pedestrian-casing {
+                stroke-width: 1.5px;
+                stroke: #aaaaaa;
+            }
+
+            .highway-pedestrian-core {
+                stroke-width: 1.2px;
+                stroke: #C87B79;
+            }
+
+            .highway-pedestrian-area {
+                stroke-width: 1.2px;
+                stroke: #C87B79;
+        fill: #C87B79;
+            }
+
+            .highway-service-casing {
+                stroke-width: 0.7px;
+                stroke: #222222;
+            }
+
+            .highway-service-core {
+                stroke-width: 0.4px;
+                stroke: #ffffff;
+            }
+
+            .highway-bridleway {
+                stroke-width: 1px;
+                stroke: #70b971;
+            }
+
+            .highway-byway {
+                stroke-width: 1px;
+                stroke: #ef7771;
+            }
+
+            .highway-cycleway {
+                stroke-width: 1px;
+                stroke: #008102;
+            }
+
+            .highway-footway {
+                stroke-width: 0.5px;
+                stroke: #d79331;
+            }
+
+            .highway-steps {
+                stroke-width: 0.5px;
+                stroke: #707070;
+                stroke-dasharray: 0.1px, 0.3px;
+            }
+
+            .highway-tunnel-narrow {
+                stroke-width: 0.1px;
+                stroke-dasharray: 0.2,0.2;
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                stroke: #000000;
+                fill: #C87B79;
+            }
+
+            .round {
+                stroke-linecap: round;
+            }
+
+
+            /* Mini roundabouts */
+            .mini-roundabout-casing {
+                fill: #222222;
+                stroke: #222222;
+            }
+
+            .mini-roundabout-core {
+                stroke: #ffffff;
+                fill: #ffffff;
+            }
+
+            .mini-roundabout-dot {
+                stroke: none;
+                fill: #222222;
+            }
+
+
+            /* Aeroways */
+            .aeroway-apron {
+                stroke-width: 0.3px;
+                stroke: none;
+                fill: #f0f0f0;
+            }
+
+            .aeroway-taxiway-core {
+                stroke-width: 2px;
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                stroke: #d4dcbd;
+                fill: #C87B79;
+            }
+
+            .aeroway-taxiway-casing {
+                stroke-width: 3px;
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                stroke: #000000;
+                fill: #C87B79;
+            }
+
+            .aeroway-runway-core {
+                stroke-width: 5px;
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                stroke: #d4dcbd;
+                fill: #C87B79;
+            }
+
+            .aeroway-runway-casing {
+                stroke-width: 7px;
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                stroke: #000000;
+                fill: #C87B79;
+            }
+
+            .aeroway-aerodrome-caption {
+                fill: black;
+                stroke: white;
+                stroke-width: 0.3px;
+                font-family: &quot;DejaVu Sans&quot;,sans-serif;
+                font-size: 6px;
+                font-weight: bold;
+            }
+
+            .aeroway-airport-caption {
+                fill: black;
+                stroke: white;
+                stroke-width: 0.3px;
+                font-family: &quot;DejaVu Sans&quot;,sans-serif;
+                font-size: 10px;
+                font-weight: bold;
+            }
+
+
+            /* Waterways */
+            .waterway-riverbank {
+                fill: #b5d6f1;
+                stroke: #aaaaaa;
+                stroke-width: 0px;
+            }
+
+            .waterway-river-casing {
+                stroke-width: 5px;
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                stroke: #aaaaaa;
+                fill: #C87B79;
+            }
+
+            .waterway-river-core {
+                stroke-width: 4px;
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                stroke: #b5d6f1;
+                fill: #C87B79;
+            }
+
+            .waterway-stream-casing {
+                stroke-width: 0.5px;
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                stroke: #aaaaaa;
+                fill: #C87B79;
+            }
+
+            .waterway-stream-core {
+                stroke-width: 0.4px;
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                stroke: #b5d6f1;
+                fill: #C87B79;
+            }
+
+            .waterway-canal-casing {
+                stroke-width: 2px;
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                stroke: #aaaaaa;
+                fill: #C87B79;
+            }
+
+            .waterway-canal-core {
+                stroke-width: 1px;
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                stroke: #b5d6f1;
+                fill: #C87B79;
+            }
+
+            .waterway-drain-casing {
+                stroke-width: 1px;
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                stroke: #aaaaaa;
+                fill: #C87B79;
+            }
+
+            .waterway-drain-core {
+                stroke-width: 0.5px;
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                stroke: #b5d6f1;
+                fill: #C87B79;
+            }
+
+            .railway-rail {
+                stroke-width: 6px;
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                stroke: #666666;
+                fill: #C87B79;
+            }
+
+            .railway-preserved {
+                stroke-width: 5px;
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                stroke: #666666;
+                fill: #C87B79;
+            }
+
+            .railway-light-rail {
+                stroke-width: 2px;
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                stroke: #666666;
+                fill: #C87B79;
+            }
+
+            .railway-tunnel-narrow {
+                stroke-width: 1px;
+                stroke-dasharray: 1,2;
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                stroke: #000000;
+                fill: #C87B79;
+            }
+
+            .railway-subway-rail {
+                stroke-width: 2px;
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                stroke: #666666;
+                fill: #C87B79;
+                stroke-dasharray: 3px, 1px;
+                stroke-dashoffset: 0;
+                stroke-opacity: 1;
+            }
+
+            /* Ferry */
+            .route-ferry {
+                stroke-width: 2px;
+                stroke-dasharray: 3,2;
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                stroke: #777777;
+                fill: #C87B79;
+            }
+            
+                        
+            /* Place markers */
+            .locality-marker {
+	      stroke-width: none;
+	      stroke: #ffffff;
+	      fill: #e8c375;
+	      opacity: 0.7;
+	    }
+
+
+            /* Place names */
+            .state-caption {
+                fill: black;
+                stroke: white;
+                stroke-width: 0.5px;
+                font-family: &quot;DejaVu Sans&quot;,sans-serif;
+                font-size: 16px;
+                font-weight: bold;
+                text-anchor: middle;
+            }
+
+            .region-caption {
+                fill: black;
+                stroke: white;
+                stroke-width: 0.4px;
+                font-family: &quot;DejaVu Sans&quot;,sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+                text-anchor: middle;
+            }
+
+            .county-caption {
+                fill: black;
+                stroke: white;
+                stroke-width: 0.4px;
+                font-family: &quot;DejaVu Sans&quot;,sans-serif;
+                font-size: 60px;
+                font-weight: bold;
+                text-anchor: middle;
+            }
+            
+           .city-caption-kn {
+                fill: black;
+                stroke: none;
+                stroke-width: 0.4px;
+                font-family: &quot;DejaVu Sans&quot;,sans-serif;
+                font-size: 56px;
+                font-weight: bold;
+                text-anchor: middle;
+            }
+            .city-caption {
+                fill: black;
+                stroke: none;
+                stroke-width: 0.4px;
+                font-family: &quot;DejaVu Sans&quot;,sans-serif;
+                font-size: 48px;
+                font-weight: bold;
+                text-anchor: middle;
+            }
+
+            .town-caption-kn {
+                fill: black;
+                stroke: none;
+                font-family: &quot;DejaVu Sans&quot;,sans-serif;
+                font-size: 42px;
+                font-weight: bold;
+                text-anchor: middle;
+            }
+            .town-caption {
+                fill: black;
+                stroke: none;
+                font-family: &quot;DejaVu Sans&quot;,sans-serif;
+                font-size: 36px;
+                text-anchor: middle;
+            }
+
+            .village-caption-kn {
+                fill: black;
+                stroke: none;
+                font-family: &quot;DejaVu Sans&quot;,sans-serif;
+                font-size: 32px;
+                font-weight: bold;
+                text-anchor: middle;
+            }
+            .village-caption {
+                fill: black;
+                stroke: none;
+                font-family: &quot;DejaVu Sans&quot;,sans-serif;
+                font-size: 26px;
+                text-anchor: middle;
+            }
+
+            .suburb-caption {
+                fill: black;
+                stroke: none;
+                font-family: &quot;DejaVu Sans&quot;,sans-serif;
+                font-size: 24px;
+                font-weight: bold;
+                text-anchor: middle;
+            }
+
+            .island-caption {
+                fill: black;
+                stroke: none;
+                font-family: &quot;DejaVu Sans&quot;,sans-serif;
+                font-size: 60px;
+                opacity: 0.7;
+                font-weight: bold;
+                text-anchor: middle;
+            }
+
+            /* Natural */
+            .natural-water {
+                fill: #b5d6f1;
+                stroke: #aaaaaa;
+                stroke-width: 0px;
+            }
+
+            .natural-coastline {
+                fill: #b5d6f1;
+                stroke: #b5d6f1;
+                stroke-width: 1.5px;
+            }
+
+            .natural-glacier {
+                fill: #fafaff;
+                stroke: lightblue;
+                stroke-width: 1.5px;
+            }
+
+            .natural-land {
+                fill: #ffffff;
+                stroke: #e0e0e0;
+                stroke-width: 0.1px;
+            }
+
+
+            /* Landuse */
+            .landuse-all {
+                stroke: none;
+                fill: #f0f0f0;
+            }
+
+            .landuse-wood {
+                fill: #72bf81;
+                stroke: #6fc18e;
+                stroke-width: 0.2px;
+            }
+
+            .landuse-cemetery {
+                fill: #bde3cb;
+                stroke: #C87B79;
+                stroke-width: 0.2px;
+            }
+
+            .landuse-field {
+                fill: #bde3cb;
+                stroke: #6fc13d;
+                stroke-width: 0.2px;
+            }
+
+            .landuse-residential {
+                stroke: none;
+                fill: #f0f0f0;
+            }
+
+            .landuse-retail {
+                stroke: none;
+                fill: #ffebeb;
+            }
+
+            .landuse-industrial {
+                fill: #ecd8ff;
+                stroke: #C87B79;
+                stroke-width: 0.2px;
+            }
+
+            .landuse-commercial {
+                fill: #fcffc9;
+                stroke: #C87B79;
+                stroke-width: 0.2px;
+            }
+
+            .landuse-retail {
+                fill: #ffebeb;
+                stroke: #C87B79;
+                stroke-width: 0.2px;
+            }
+
+            .landuse-runway {
+              stroke-width: 0.3px;
+              stroke: #808080;
+              fill: #d4dcbd;
+              }
+
+            .landuse-runway-disused {
+              stroke-width: 0.3px;
+              stroke: #808080;
+              fill: #d4dcbd;
+              stroke-dasharray: 1px, 1px;
+              }
+
+            .landuse-runway-dismantled {
+              stroke-width: 0.3px;
+              stroke: #808080;
+              fill: #fcffef;
+              stroke-dasharray: 0.3px, 1.7px;
+              opacity: 0.5;
+              }
+
+
+            /* Leisure */
+            .leisure-park {
+                fill: #c7f1a3;
+                stroke: #6fc18e;
+                stroke-width: 0.2px;
+            }
+
+            .leisure-stadium {
+                fill: #bde3cb;
+                stroke: #6fc18e;
+                stroke-width: 0.2px;
+            }
+
+            .leisure-track {
+                fill: #bde3cb;
+                stroke: #6fc18e;
+                stroke-width: 0.2px;
+            }
+
+            .sport {
+                fill: #bde3cb;
+                stroke: #6fc18e;
+                stroke-width: 0.2px;
+            }
+
+            .amenity-parking {
+                fill: #f7efb7;
+                stroke: #e9dd72;
+                stroke-width: 0.2px;
+            }
+
+
+
+            /* Non-physical boundaries */
+            .boundary {
+                stroke-linecap: butt;
+                stroke-linejoin: round;
+                fill: #C87B79;
+            }
+
+            .boundary-administrative-state-casing {
+                stroke-width: 32px;
+                stroke: #bbbbbb;
+                opacity: 0.5;
+            }
+
+            .boundary-administrative-state-core {
+                stroke-width: 7px;
+                stroke: #bbbbbb;
+               
+            }
+
+            .boundary-district {
+		stroke: #bbbbbb;
+		stroke-width: 7px;
+		stroke-opacity: 0.5;
+		stroke-linejoin: round;
+		stroke-linecap: butt;
+		fill: #C87B79; 
+            }
+
+
+            /* Racetracks */
+            .highway-raceway-casing {
+              stroke-width: 2px;
+              stroke-linecap: butt;
+              stroke-linejoin: round;
+              fill: #C87B79;
+              stroke: #101010;
+              }
+
+            .highway-raceway-casing-disused {
+              stroke-width: 2px;
+              stroke-linecap: butt;
+              stroke-linejoin: round;
+              fill: #C87B79;
+              stroke: #808080;
+              stroke-dasharray: 1px, 1px;
+              }
+
+            .highway-raceway-casing-dismantled {
+              stroke-width: 2px;
+              stroke-linecap: butt;
+              stroke-linejoin: round;
+              fill: #C87B79;
+              stroke: #808080;
+              stroke-dasharray: 0.3px, 1.7px;
+              opacity: 0.5;
+              }
+
+            .highway-raceway-core {
+              stroke-width: 1.5px;
+              stroke-linecap: butt;
+              stroke-linejoin: round;
+              fill: #C87B79;
+              stroke: #f0f0f0;
+              }
+
+            .highway-raceway-core-disused {
+              stroke-width: 1.5px;
+              stroke-linecap: butt;
+              stroke-linejoin: round;
+              fill: #C87B79;
+              stroke-dasharray: 1px, 1px;
+              stroke: #f7f7f7;
+              }
+
+            .highway-raceway-core-dismantled {
+              stroke-width: 1.5px;
+              stroke-linecap: butt;
+              stroke-linejoin: round;
+              fill: #C87B79;
+              stroke: #fbfbfb;
+              stroke-dasharray: 0.3px, 1.7px;
+              opacity: 0.5;
+              }
+
+            .landuse-raceway {
+              stroke-width: 0.3px;
+              stroke-linecap: butt;
+              stroke-linejoin: round;
+              fill: #f0f0f0;
+              stroke: #101010;
+              }
+
+            .landuse-raceway-disused {
+              stroke-width: 0.3px;
+              stroke-linecap: butt;
+              stroke-linejoin: round;
+              fill: #f7f7f7;
+              stroke: #808080;
+              stroke-dasharray: 1px, 1px;
+              }
+
+            .landuse-raceway-dismantled {
+              stroke-width: 0.3px;
+              stroke-linecap: butt;
+              stroke-linejoin: round;
+              fill: #fbfbfb;
+              stroke: #808080;
+              stroke-dasharray: 0.3px, 1.7px;
+              opacity: 0.5;
+              }
+
+            /* Tourism */
+            .tourism-attraction {
+                fill: #f2caea;
+                stroke: #f124cb;
+                stroke-width: 0px;
+            }
+            .tourism-green-area {
+                fill: #c7f1a3;
+                stroke: #6fc18e;
+                stroke-width: 0.2px;
+            }
+
+            /* Building */
+            .building {
+                fill: #dddddd;
+                stroke: #cccccc;
+                stroke-width: 0.2px;
+            }
+
+            .building-block {
+                fill: #F3D6B6;
+                stroke: #6a5a8e;
+                stroke-width: 0.2px;
+            }
+
+            .building-residential {
+                fill: #c95e2a;
+                stroke: #80290a;
+                stroke-width: 0.2px;
+            }
+
+
+            /* Map decoration */
+            .map-grid-line {
+                fill: #C87B79;
+                stroke: #8080ff;
+                stroke-width: 0.1px;
+                stroke-opacity: 0.5;
+            }
+
+            .map-border-casing {
+                fill: #C87B79;
+                stroke: #8080ff;
+                stroke-width: 3px;
+                stroke-miterlimit: 4;
+                stroke-dasharray: none;
+                stroke-opacity: 1;
+                stroke-linecap: round;
+            }
+
+            .map-border-core {
+                fill: #C87B79;
+                fill-opacity: 1;
+                fill-rule: nonzero;
+                stroke: #ffffff;
+                stroke-width: 2px;
+                stroke-miterlimit: 0;
+                stroke-dashoffset: -0.5px;
+                stroke-opacity: 1;
+            }
+
+            .map-scale-casing {
+                fill: #C87B79;
+                stroke: #8080ff;
+                stroke-width: 4px;
+                stroke-linecap: butt;
+            }
+
+            .map-scale-core {
+                fill: #C87B79;
+                stroke: #ffffff;
+                stroke-width: 3px;
+                stroke-linecap: butt;
+            }
+
+            .map-scale-bookend {
+                fill: #C87B79;
+                stroke: #8080ff;
+                stroke-width: 1px;
+                stroke-linecap: butt;
+            }
+
+            .map-scale-caption {
+                font-family: &quot;DejaVu Sans&quot;,sans-serif;
+                font-size: 10px;
+                fill: #8080ff;
+            }
+
+            <!-- map background must be the same for all zooms or else empty tile detection will fail -->
+
+            .map-background {
+    	      fill: transparent;
+    	      opacity:1;
+              stroke: none;
+            }
+
+            .map-title {
+                font-family: &quot;DejaVu Sans&quot;,sans-serif;
+                font-size: 20px;
+                text-anchor: middle;
+                fill: black;
+            }
+
+            .map-title-background {
+                fill: white;
+            }
+
+            .map-marginalia-background {
+                fill: white;
+            }
+            
+
+        </style>
+  </defs>
+  <defs
+     id="defs-symbols" />
+  <defs
+     id="defs-included" />
+  <defs
+     id="defs-ways">
+    <path
+       id="way_start_45673237"
+       d="M315.2209 1708.95305358649L317.596005263162 1709.93374825441" />
+    <path
+       id="way_mid_45673237"
+       d="M317.596005263162 1709.93374825441L319.733600000007 1710.81637345553L321.948100000001 1714.05653687729L323.209800000001 1715.59214192331L324.169400000002 1716.32858090843L325.692000000005 1716.57087343228L328.066900000011 1716.02230046305L331.453600000003 1713.61818284021L333.332700000001 1711.50931326247L334.37140000001 1709.62949732828L335.422500000007 1709.6614387538L353.644800000013 1717.57629284284L362.770100000007 1719.60163139002L367.86810000001 1723.51991968123L366.04580000001 1726.43278856188L364.910704761917 1727.41980062524" />
+    <path
+       id="way_end_45673237"
+       d="M364.91667894738 1727.41460582491L363.662100000014 1728.50551389494" />
+    <path
+       id="way_start_45673396"
+       d="M2533.60790000001 338.816779944915L2509.89890000001 333.390608623987" />
+    <path
+       id="way_mid_45673396"
+       d="M2509.89890000001 333.390608623987L2488.5608 328.507054435152L2461.35410000001 349.5952248601L2388.20820000001 358.499107365022L2364.12360000001 375.369643704978L2346.28310000001 433.010677889985L2331.1187 433.947906559877L2300.79000000001 416.140141550033L2290.97770000001 386.148088620163L2263.32500000001 393.177513785302L2261.98700000001 418.014703960292L2218.7239 439.571488720182L2206.6815 417.07737021992L2189.73310000001 402.081396290228L2162.08040000001 402.081396290228L2119.70930000001 372.557852624827L2117.4793 362.248127115065L2078.2303 359.436336034914L2062.6199 368.340218539836L2053.25360000001 342.565799694957L1992.15000000001 318.665838189859L1985.45990000001 321.946243604959L1985.90590000001 332.256074185198L1998.39420000001 355.687316284871L1988.1359 374.432415035087L1985.01390000001 409.11071638489L1964.05130000001 425.981357795326L1955.1311 445.663580144953L1971.18750000001 470.969384654889L1937.29060000001 480.341986565237L1917.66610000001 470.969384654889L1888.67540000001 435.82246897014L1852.99450000001 423.638181050118L1851.2104 407.704873380053L1844.96630000001 404.893082299902L1811.9614 404.424467964956L1799.91910000001 389.42849403526L1766.91430000001 395.051971125085L1741.04560000001 372.089238289882L1726.77320000001 383.804911874954L1703.13460000001 382.399068870121L1697.7825 376.775591780292L1729.0033 347.720662449837L1711.16280000001 313.979589769925L1717.40700000001 280.238517090012L1702.6886 265.24243808984L1664.33160000001 261.024804004852L1639.35500000001 274.146320594762L1607.2422 272.740477589928L1611.70230000001 230.095522405091L1602.56968095239 199.076915888378" />
+    <path
+       id="way_end_45673396"
+       d="M1602.61774736843 199.24017171215L1592.52380000001 164.956448719994" />
+    <path
+       id="way_start_45674216"
+       d="M3146.3274 1391.56319128981L3182.47782105264 1373.31139843703" />
+    <path
+       id="way_mid_45674216"
+       d="M3182.47782105264 1373.31139843703L3215.0132 1356.88478486953L3253.37010000001 1356.88478486953L3278.79280000001 1370.94353012933L3296.63330000001 1399.52974005436L3360.4129 1438.42578055963L3378.6994 1462.32574206473L3397.43180000001 1470.29239589976L3399.2159 1491.38056632471L3415.71830000001 1519.02954757985L3463.88750000001 1556.98825434475L3455.8593 1574.7960193546L3477.71390000001 1588.85486968488L3491.5402 1585.57446426978L3480.83600000001 1612.7547261195L3507.59670000001 1676.9565711347L3509.38070000001 1697.5761272247L3553.08980000001 1752.87408973499L3498.23040000001 1785.20931941006L3499.56850000001 1834.88369976004L3527.2212 1843.78758226496L3562.9021 1840.50717684986L3582.52660000001 1818.48177775503L3582.08060000001 1778.64850857986L3594.56890000001 1769.27601174L3624.0056 1777.71127990997L3632.47990000001 1797.3935022596L3626.23570000001 1806.297489835L3612.8554 1807.70333283984L3626.68170000001 1875.65419760509L3665.48470000001 1873.77963519483L3719.0061 1839.56994817997L3738.63060000001 1838.63271951008L3737.29250000001 1864.40713835496L3714.1 1885.96392311485L3708.74780000001 1930.014826375L3730.60240000001 1969.37937614474L3727.0343 1982.03238347018L3749.33490000001 2096.37711809983L3759.14710000001 2105.28110567524L3768.9594 2184.94753895508L3797.0581 2236.02776230989L3820.69670000001 2243.52580180998L3838.53710000001 2239.77678205994L3853.7015 2214.00236321506L3924.17130000001 2169.95145995491L3956.73020000001 2176.04365645016L4018.72580000001 2212.59652021022L4081.16737142858 2215.27436644347" />
+    <path
+       id="way_end_45674216"
+       d="M4080.83873157896 2215.26027251593L4149.8531 2218.21999730005" />
+    <path
+       id="way_start_45674480"
+       d="M206.461100000013 2456.37253415184L205.564363157907 2452.82170497473" />
+    <path
+       id="way_mid_45674480"
+       d="M205.564363157907 2452.82170497473L204.757300000012 2449.62595871533L207.1653 2443.87797310826L208.0153 2431.22969395435L212.958900000004 2424.53071544468L212.708300000004 2415.49833174432L218.087800000008 2402.61658598678L214.930100000004 2400.60679787044L213.67740000001 2388.92064908988L210.3197 2383.28162156921L210.640400000003 2376.41925846518L212.352900000014 2374.40905006693L213.888300000009 2366.60483519195L216.628700000002 2362.85823206292L216.304700000005 2356.44107759387" />
+    <path
+       id="way_end_45674480"
+       d="M216.306405263163 2356.47485209107L215.948300000009 2349.38220767791" />
+    <path
+       id="way_start_45674572"
+       d="M1058.64810000001 3.280300344620628L1050.1973631579 38.3039960079935" />
+    <path
+       id="way_mid_45674572"
+       d="M1050.1973631579 38.3039960079935L1042.5917 69.825322105029L1087.19290000001 80.6036619497336L1084.5168 102.160551780104L1109.04740000001 115.750682704964L1116.1836 141.525101549842L1101.46520000001 187.450462149776L1093.88300000001 190.730867564872L1093.88300000001 212.756371730188L1071.1364 223.066097239951L1064.4463 236.656228164808L1034.11750000001 237.593561905179L1018.06110000001 265.711052424786L1035.90150000001 274.615040000188L1059.54010000001 327.569825765261L1059.54010000001 361.779512780119L1044.82180000001 375.838258039924L1027.4273 375.838258039924L1043.48370000001 397.86376220524L1060.43220000001 472.843947065148L1045.7138 490.651712074996L1021.62920000001 485.496849320116L1000.22060000001 510.802653830048L972.567900000002 506.58501974506L946.699300000006 534.234001000202L930.642800000001 529.547752580268L935.995000000006 546.88690325517L927.966800000008 591.406420850267L945.361200000008 613.900434280048L931.534900000003 669.198396790331L931.534900000003 708.562946560068L898.084000000012 720.747234480086L874.891400000011 703.408083805185L847.684700000003 704.345312475076L830.736300000013 694.972815635208L823.600100000008 703.408083805185L799.515500000013 708.562946560068L794.163300000009 677.633664960306L775.876900000001 669.667011125272L766.510600000005 650.921912375057L733.951800000001 637.800395785143L711.20520000001 613.900434280048L688.90470000001 602.653480100398L660.8059 628.427898945275L641.627400000005 625.147493530179L636.275300000008 634.051376035101L609.068600000001 644.829820950286L610.406600000005 664.043534035447L649.209600000007 671.07285413011L654.1158 681.851299045295L648.76360000001 693.098358295425L633.15320000001 688.880724210437L615.758800000009 694.035586965317L609.960600000009 724.496254230132L594.796200000005 755.425640900371L593.012200000005 764.798137740238L606.83850000001 772.296177240326L597.472300000007 799.476544160522L579.63190000001 820.09610025052L593.458200000001 842.590113680301L596.5803 867.895918190237L576.955800000008 873.050886015593L563.575400000005 853.368558595486L554.209200000003 853.837172930432L541.720900000002 887.578245610344L545.735000000008 908.666416035288L507.824 900.231147865312L505.594000000003 932.566377540387L513.622200000001 946.156508465242L515.852200000012 981.772143555418L529.678600000012 987.395620645243L535.476700000005 978.960352475263L565.3595 980.834914885526L560.899400000012 1015.51321623533L575.61770000001 1019.26223598537L601.932400000011 1012.70153022566L588.998100000013 1055.81509974544L605.054500000009 1060.96996250032L630.031100000011 1058.62689082559L636.275300000008 1082.99546666563L646.979600000009 1084.40130967047L647.425600000006 1101.27184601042L673.740300000007 1110.17572851535L678.200400000009 1123.76596451069L684.996733333343 1125.77436169401" />
+    <path
+       id="way_end_45674572"
+       d="M684.960963157905 1125.76379118252L692.472700000011 1127.98359859567" />
+    <path
+       id="way_start_145690824"
+       d="M53.1708000000044 3688.39187736076L43.7972210526389 3676.65251867777" />
+    <path
+       id="way_mid_145690824"
+       d="M43.7972210526389 3676.65251867777L35.3610000000099 3666.08709586309L25.3518000000104 3640.19394737729L13.2795142857202 3631.29632907424" />
+    <path
+       id="way_end_145690824"
+       d="M13.3430526315848 3631.34315864426L 9.09494701772928e-13 3621.50894894089" />
+    <path
+       id="way_start_146058061"
+       d="M4149.8531 2218.21999730005L4162.52920526316 2219.20660909492" />
+    <path
+       id="way_mid_146058061"
+       d="M4162.52920526316 2219.20660909492L4173.93770000001 2220.09455971031L4184.196 2203.6926377053L4202.4825 2209.31611479512L4224.33700000001 2199.47500362031L4235.04130000001 2200.88084662514L4245.74560000001 2222.43763138504L4318.89140000001 2208.37888612523L4333.60980000001 2196.19459820521L4375.9809 2209.31611479512L4407.64770000001 2184.01031028519L4413.89190000001 2159.64173444515L4427.7182 2144.64565544497L4453.14090000001 2136.21038727499L4467.8593 2161.04757744998L4494.19520476191 2144.98039998336" />
+    <path
+       id="way_end_146058061"
+       d="M4494.05659473685 2145.06496407529L4523.16470000001 2127.30650477007" />
+    <path
+       id="way_start_146058105"
+       d="M3032.14850000001 1260.81642958467L3047.4067631579 1278.82152801354" />
+    <path
+       id="way_mid_146058105"
+       d="M3047.4067631579 1278.82152801354L3061.1392 1295.02611659953L3080.25396190476 1342.55819994948" />
+    <path
+       id="way_end_146058105"
+       d="M3080.15335789474 1342.30803108974L3101.28020000001 1394.84349163443" />
+    <path
+       id="way_start_146058114"
+       d="M3101.28020000001 1394.84349163443L3107.61830526316 1395.8301034293" />
+    <path
+       id="way_mid_146058114"
+       d="M3107.61830526316 1395.8301034293L3113.3226 1396.71805404469L3131.60900000001 1379.84751770473L3138.61776190477 1385.4264098881" />
+    <path
+       id="way_end_146058114"
+       d="M3138.58087368422 1385.39704729766L3146.3274 1391.56319128981" />
+    <path
+       id="way_start_147054605"
+       d="M4523.16470000001 2127.30650477007L4541.23991052633 2149.75121802525" />
+    <path
+       id="way_mid_147054605"
+       d="M4541.23991052633 2149.75121802525L4557.50760000001 2169.95145995491L4559.29160000001 2178.85544753031L4547.2493 2191.97696412022L4528.51680000001 2193.85142146L4517.81250000001 2206.03570938003L4494.17390000001 2205.09848071014L4468.75130000001 2225.71803680013L4449.57280000001 2256.17870406495L4388.02320000001 2264.61397223493L4374.1969 2284.76491398998L4341.19200000001 2303.04139840525L4335.83990000001 2343.34328191536L4298.82090000001 2403.3273877751L4276.52040000001 2425.35289194041L4267.60010000001 2445.97244803041L4288.5627 2464.2488273752L4266.26210000001 2499.39584813043L4264.77538571429 2523.94291369698" />
+    <path
+       id="way_end_147054605"
+       d="M4264.78321052632 2523.81371861505L4263.14000000001 2550.94468582019" />
+    <path
+       id="way_start_147238874"
+       d="M2642.43470000001 1140.1678865157L2671.02059473685 1166.91695018093" />
+    <path
+       id="way_mid_147238874"
+       d="M2671.02059473685 1166.91695018093L2696.74790000001 1190.99110747964L2777.0299 1209.73610115938L2783.2741 1226.13802316439L2797.54650000001 1230.82427158433L2810.9268 1257.53602416958L2826.53720000001 1262.22227258951L2875.59850000001 1304.86722777434L2922.87570000001 1283.7790573494L2935.81 1303.46138476951L2953.65050000001 1305.33584210929L2966.58480000001 1282.37321434456L3011.63190000001 1278.15558025957L3021.40170952382 1269.89884184295" />
+    <path
+       id="way_end_147238874"
+       d="M3021.35028947369 1269.94229836094L3032.14850000001 1260.81642958467" />
+    <path
+       id="way_start_147238879"
+       d="M2642.43470000001 1140.1678865157L2659.10143684211 1136.46818906036" />
+    <path
+       id="way_mid_147238879"
+       d="M2659.10143684211 1136.46818906036L2674.10150000001 1133.13846135055L2687.48190000001 1110.64444792077L2689.26590000001 1027.69750415535L2679.89970000001 988.801568720561L2683.02170000001 939.595802705526L2674.5475 917.570298540214L2664.28930000001 912.884050120277L2608.09180000001 926.00556671019L2606.30780000001 852.89994426054L2619.68810000001 833.68623117538L2691.496 783.074622155511L2670.97940000001 748.864830070174L2668.74940000001 724.496254230132L2693.72600000001 664.043534035447L2710.22840000001 649.984683705165L2705.32230000001 611.088748270374L2721.3787 541.263426165345L2694.17200000001 499.086980244976L2688.3739 474.249790069986L2659.3831 445.194965810008L2618.79610000001 432.073449220097L2576.425 398.332376540186L2564.82870000001 364.591303860273L2541.63610000001 352.875630275197L2537.81314761905 346.18093964173" />
+    <path
+       id="way_end_147238879"
+       d="M2537.83326842106 346.21617485559L2533.60790000001 338.816779944915" />
+    <path
+       id="way_start_147426506"
+       d="M1058.64810000001 3.280300344620628L1068.27257368422 1.553826479030824" />
+    <path
+       id="way_mid_147426506"
+       d="M1068.27257368422 1.553826479030824L1076.9346 0L1083.62480000001 6.092091424770842L1071.1364 22.0253990948358L1084.5168 34.6783013498043L1125.83220000001 37.8938782795503L1132.68600000001 38.4273210998454L1134.4701 66.5449166899325L1146.06640000001 83.4154530298892L1173.48290000001 95.9399591599013L1176.84120000001 97.4741982896912L1224.56440000001 104.503623454833L1242.4048 128.872199294877L1252.21710000001 129.809427964769L1260.69130000001 106.846800200042L1274.5177 98.8801463650079L1333.39120000001 109.658486209712L1352.12360000001 103.566394784942L1383.7905 118.093754379693L1444.44800000001 132.621219044921L1464.96450000001 156.521180550018L1471.84970000001 152.387182566061L1486.81910000001 143.399663960105L1533.20430000001 144.336892629996L1555.95090000001 165.893677389887L1583.8497 165.178777852898L1587.98022380953 165.072906837229" />
+    <path
+       id="way_end_147426506"
+       d="M1587.95848421053 165.073464053101L1592.52380000001 164.956448719994" />
+    <path
+       id="way_start_147427262"
+       d="M692.472700000011 1127.98359859567L700.401226315799 1140.18056686347" />
+    <path
+       id="way_mid_147427262"
+       d="M700.401226315799 1140.18056686347L707.536900000009 1151.15783830448L672.302000000003 1143.65979880439L602.278200000002 1166.6225316396L551.432900000009 1296.43195960437L534.038500000009 1289.4026395097L529.132300000001 1271.59476942938L522.442200000001 1272.06338376432L514.414000000003 1290.3398681796L497.465500000004 1304.86722777434L494.343400000006 1340.01424852957L513.075900000004 1379.37890336979L501.479600000011 1432.33358406438L476.949000000005 1432.80230346981L440.822100000006 1446.39243439466L422.535600000004 1461.38851339484L410.047300000003 1451.54729714954L413.615400000012 1434.67676080959L405.141200000004 1433.27091780475L399.343000000003 1442.17480030968L393.990900000006 1436.55121814937L381.056500000001 1438.89439489458L377.934500000009 1445.45520572477L375.704400000004 1439.83162356447L361.878100000014 1439.83162356447L357.863900000013 1465.60614747983L366.338200000002 1467.01199048467L351.173800000013 1486.69431790477L367.676200000006 1498.8786058248L365.892200000005 1517.15498516959L341.361500000005 1506.84525965983L335.563400000013 1524.65302466967L311.032700000013 1528.40204441972L314.600800000008 1534.02552150954L348.497700000011 1538.71176992948L349.835700000001 1547.14703809946L324.859100000012 1557.92548301464L299.436400000005 1550.42744351456L293.192300000002 1552.30200592482L290.516200000014 1566.36075118462L319.953000000013 1576.20196742991L314.154800000012 1608.06847769956L286.056100000012 1631.96843920466L284.27210000001 1648.37036120967L331.549300000007 1681.17420521969L335.117400000002 1691.48403579993L325.642876190477 1699.80261569829" />
+    <path
+       id="way_end_147427262"
+       d="M325.692742105264 1699.75883369883L315.2209 1708.95305358649" />
+    <path
+       id="way_start_149935006"
+       d="M276.569200000012 4191.9795515603L278.720305263166 4175.77608003941" />
+    <path
+       id="way_mid_149935006"
+       d="M278.720305263166 4175.77608003941L280.656300000005 4161.1929556706L270.445700000011 4145.2115257213L274.905800000014 4114.28224412154L266.431600000005 4111.00183870644L255.727300000005 4084.29008612119L267.769600000009 4039.77056852609L257.511400000013 4028.52361434644L262.863500000009 4014.46476401616L274.013800000007 4007.90405825644L251.267200000001 3994.78243659605L248.591100000013 3950.26302407143L259.741400000011 3919.80225173614L260.187400000007 3892.62188481595L275.797800000007 3888.40425073096L275.35180000001 3881.84354497124L253.497300000007 3880.90631630135L252.387900000003 3854.26496093682L263.755500000002 3845.75929554612L265.985600000008 3835.44957003636L284.27210000001 3832.16916462126L298.544400000013 3840.60443279124L307.910700000009 3814.82990887588L329.765200000012 3804.05156903118L345.375600000012 3816.2358569512L355.187900000004 3815.29862828131L355.633900000002 3789.055490031L349.389700000003 3772.18495369105L356.525900000009 3761.87522818129L338.605500000001 3768.37163080805L317.403000000014 3764.60023104604L281.148200000005 3731.52183787521L259.295400000014 3721.57334467118L203.289300000009 3717.19484768332L193.35000000001 3729.15670139996L175.9548 3730.42584771203L139.510400000006 3713.1139102911L113.638400000013 3713.77795571641L84.8443047619139 3701.68934697562" />
+    <path
+       id="way_end_149935006"
+       d="M84.9958526315881 3701.75297123215L53.1708000000044 3688.39187736076" />
+    <path
+       id="way_start_149936226"
+       d="M450.591000000003 2534.51943816891L440.285105263166 2532.31190741169" />
+    <path
+       id="way_mid_149936226"
+       d="M440.285105263166 2532.31190741169L431.009800000013 2530.32512973019L421.197600000014 2518.14084181017L385.962700000008 2517.20361314028L381.502600000005 2509.70557364019L356.525900000009 2506.42516822509L354.741900000008 2474.55865795544L313.262800000004 2488.61740321524L301.666500000011 2465.65467038004L292.300300000009 2463.78021304026L266.431600000005 2497.52128572017L254.835300000012 2470.8096382054L238.7789 2472.21548121023L225.844600000003 2459.56257895527L216.61436190477 2458.04351000125" />
+    <path
+       id="way_end_149936226"
+       d="M216.662942105271 2458.05150510101L206.461100000013 2456.37253415184" />
+    <path
+       id="way_start_149936228"
+       d="M227.628600000003 2956.77510186046L214.952494736848 2950.85559699197" />
+    <path
+       id="way_mid_149936228"
+       d="M214.952494736848 2950.85559699197L203.544000000008 2945.52804261033L188.379600000006 2945.99676201575L168.309100000002 2936.62416010541L163.849000000014 2927.25166326554L141.102400000009 2921.15957184077L140.210400000002 2909.91251259064L124.600000000001 2896.3222765953L135.750300000013 2866.33022366543L156.266800000012 2863.9871519907L158.050800000013 2848.52245865558L163.403000000003 2846.64789624532L145.116500000001 2834.93232773072L147.747642857149 2833.04491169857" />
+    <path
+       id="way_end_149936228"
+       d="M147.733794736848 2833.05484546716L150.641900000011 2830.9687540632" />
+    <path
+       id="way_start_150019123"
+       d="M3623.55960000001 3012.54167870569L3609.70981052632 3026.35380143191" />
+    <path
+       id="way_mid_150019123"
+       d="M3609.70981052632 3026.35380143191L3597.245 3038.78471188551L3587.87870000001 3026.13180963055L3490.64820000001 2998.01421404046L3448.7232 2993.79657995547L3440.2489 3001.7632337905L3404.56800000001 3007.85543028575L3398.76990000001 3004.10641053571L3402.338 2990.51617454037L3421.51650000001 2973.64563820042L3389.84960000001 2959.11827860567L3394.75580000001 2950.21439610074L3359.9669 2940.37317985545L3325.17800000001 2920.69085243534L3314.02770000001 2936.15554577046L3284.1449 2952.08885344053L3260.9523 2952.55746777547L3247.12600000001 3013.01029304063L3236.42170000001 3025.6631952956L3217.68920000001 3027.06903830044L3210.99910000001 3048.15731379586L3185.13040000001 3039.7219405554L3178.88620000001 3021.91417554556L3165.5059 3008.79265895565L3161.9378 2988.17310286565L3154.80160000001 2985.82992612044L3131.60900000001 3006.44948221044L3152.5716 3058.46703930562L3136.0691 3070.1827128907L3134.73110000001 3083.77284381555L3123.1348 3096.89436040547L3207.431 3123.60611299072L3252.47810000001 3152.6609372507L3256.0462 3120.32570757562L3285.48300000001 3132.97860983058L3296.63330000001 3118.45125023584L3334.0982 3142.81982607588L3348.81660000001 3143.28844041082L3355.0608 3158.75302867547L3346.1405 3174.21772201059L3351.49270000001 3198.58629785063L3329.63810000001 3203.74116060551L3328.7461 3231.39014186065L3319.37980000001 3250.13524061087L3320.71790000001 3256.69594637058L3350.60060000001 3268.88023429061L3368.88710000001 3289.03117604566L3327.40800000001 3315.27431429596L3275.67070000001 3307.77627479588L3221.25730000001 3286.68810437093L3217.24320000001 3259.97635178568L3187.80650000001 3245.44899219093L3183.34630000001 3231.39014186065L3164.61390000001 3223.89210236056L3163.72180000001 3243.10581544572L3137.85320000001 3264.19398587067L3123.58080000001 3218.26862527074L3099.9422 3217.33139660085L3102.17230000001 3205.61572301577L3083.88580000001 3201.39808893078L3080.31770000001 3157.81580000558L3053.55700000001 3090.33365464575L3026.7963 3054.71801955558L3014.8619 3064.68300882476L3000.48170000001 3063.6219020605L2982.6412 3045.34552271571L2966.13880000001 3051.90622847542L2960.34060000001 3046.75136572055L2959.00260000001 3021.44556121061L2946.9603 3018.63377013046L2931.78320000001 3038.41728042154L2898.79110000001 3081.42977214083L2870.6923 3085.64740622582L2852.40590000001 3079.08659539562L2848.83780000001 3104.39239990556L2830.57256190477 3103.49980117233" />
+    <path
+       id="way_end_150019123"
+       d="M2830.66869473685 3103.5044990604L2810.48080000001 3102.51794256577" />
+    <path
+       id="way_start_150019153"
+       d="M3623.55960000001 3012.54167870569L3622.38591578948 3002.67583725821" />
+    <path
+       id="way_mid_150019153"
+       d="M3622.38591578948 3002.67583725821L3621.32960000001 2993.79657995547L3628.91180000001 2965.21037003044L3619.99150000001 2948.80844802543L3631.58780000001 2934.74970276562L3635.1559 2912.25558426536L3661.02460000001 2917.87916642567L3677.97300000001 2912.72419860031L3679.7571 2887.41839409038L3669.94480000001 2854.61455008036L3695.3675 2850.39691599537L3720.7901 2868.20478607569L3756.02500000001 2877.10866858062L3790.8139 2869.61062908053L3811.3304 2841.49303349044L3826.9408 2851.33424973573L3883.13830000001 2829.77735990536L3927.73940000001 2821.34209173539L3945.1339 2798.37946397066L3943.91230000001 2796.72912196192L3935.76760000001 2785.72656171569L3935.32160000001 2754.32856071051L3946.47190000001 2727.14819379031L3954.9461 2721.99333103544L4032.10610000001 2729.49137053552L4053.96070000001 2711.21488612025L4087.4115 2656.85425735034L4094.9937 2654.04246627019L4107.928 2661.07189143533L4114.61820000001 2678.87965644518L4136.47280000001 2690.59533003025L4180.6279 2685.90908161031L4185.08800000001 2674.66202236019L4206.49660000001 2664.82091118537L4258.23390000001 2594.52697474539L4260.57013809525 2573.77350382863" />
+    <path
+       id="way_end_150019153"
+       d="M4260.55784210527 2573.88273262293L4263.14000000001 2550.94468582019" />
+    <path
+       id="way_start_150022985"
+       d="M2834.5654 3261.85091419594L2824.94092631579 3285.28218394574" />
+    <path
+       id="way_mid_150022985"
+       d="M2824.94092631579 3285.28218394574L2816.2789 3306.37032672056L2812.71090000001 3333.55069364075L2756.5134 3388.84865615104L2737.7809 3423.52695750084L2707.45220000001 3452.11316742587L2688.27370000001 3453.98762476565L2666.86510000001 3446.48969033604L2637.8744 3393.06629023602L2626.7241 3383.22507399073L2574.98680000001 3391.19172782577L2539.75190000001 3349.95261564577L2515.22120000001 3359.79383189106L2487.56850000001 3388.84865615104L2447.8735 3391.19172782577L2433.6011 3397.75253865596L2412.63860000001 3421.18378075563L2364.9154 3419.77793775079L2318.97620000001 3449.76999068066L2261.88670000001 3453.98762476565L2215.5015 3476.48174326591L2207.91940000001 3492.88366527092L2191.41690000001 3504.599338856L2125.35440000001 3507.5883838337L2124.49790000001 3507.62715484033L2098.2005 3508.81697294099L2030.85280000001 3526.62473795084L2025.50070000001 3542.5580456209L1990.2658 3582.85992913101L1988.92770000001 3599.73046547097L2000.9701 3634.87748622619L1984.02160000001 3656.43427098608L1980.41102857143 3694.1475181027" />
+    <path
+       id="way_end_150022985"
+       d="M1980.43003157895 3693.9490273284L1976.4394 3735.63208993098" />
+    <path
+       id="way_start_150023065"
+       d="M2810.48080000001 3102.51794256577L2806.02069473685 3118.30323358149" />
+    <path
+       id="way_mid_150023065"
+       d="M2806.02069473685 3118.30323358149L2802.00660000001 3132.50999549564L2774.35390000001 3163.43938216588L2756.5134 3209.83335710076L2778.81400000001 3220.61180201594L2797.99250000001 3221.08041635089L2806.4667 3248.72929253555L2819.84703333334 3254.9776838024" />
+    <path
+       id="way_end_150023065"
+       d="M2819.77661052632 3254.94479753258L2834.5654 3261.85091419594" />
+    <path
+       id="way_start_150030112"
+       d="M1956.81490000001 3882.78077364113L1948.59890000001 3885.74049842525" />
+    <path
+       id="way_mid_150030112"
+       d="M1948.59890000001 3885.74049842525L1941.20450000001 3888.40425073096L1887.6831 3866.84746597107L1833.26980000001 3866.37885163612L1795.80480000001 3858.41219780109L1774.8423 3864.03567489091L1672.7056 3916.0532319861L1670.4756 3943.23359890629L1686.532 3988.69034517128L1682.49666666667 3995.16183608788" />
+    <path
+       id="way_end_150030112"
+       d="M1682.51790526316 3995.12777560937L1678.05780000001 4002.28047609614" />
+    <path
+       id="way_start_150030118"
+       d="M1956.81490000001 3882.78077364113L1974.18590000001 3867.48876087272" />
+    <path
+       id="way_mid_150030118"
+       d="M1974.18590000001 3867.48876087272L1989.81980000001 3853.72594938115L1992.4958 3762.81245685118L1984.8498952381 3749.86942498442" />
+    <path
+       id="way_end_150030118"
+       d="M1984.89013684211 3749.93754620477L1976.4394 3735.63208993098" />
+    <path
+       id="way_start_150031078"
+       d="M1678.05780000001 4002.28047609614L1671.71974736842 4008.44662008828" />
+    <path
+       id="way_mid_150031078"
+       d="M1671.71974736842 4008.44662008828L1666.0155 4013.99614968122L1653.97320000001 4013.05892101132L1637.47070000001 4000.8746330913L1627.65850000001 3955.88650116126L1621.41430000001 3949.79430466601L1602.68180000001 3952.13748141122L1595.09970000001 3967.13356041139L1604.01990000001 4017.74516943126L1586.17940000001 4051.48624211117L1554.95860000001 4082.41562878141L1539.7942 4091.78812562128L1518.83170000001 4094.59991670143L1490.73300000001 4092.25673995622L1451.48400000001 4073.98036061143L1401.08470000001 4020.55696051141L1381.9062 4012.59030667638L1368.0798 4015.40199268605L1323.92470000001 4057.57843860642L1260.59110000001 4039.77056852609L1185.66120000001 4029.46084301633L1105.37910000001 4061.32745835646L1080.8485 4086.16464853145L1021.529 4083.82147178625L1016.17680000001 4089.44494887607L1024.65100000001 4122.24879288609L1002.7965 4191.13688632123L944.815000000006 4221.12904432158L946.15300000001 4234.71917524644L929.650600000003 4275.48967309149L890.401600000005 4275.48967309149L891.739600000009 4290.01703268624L874.345200000008 4297.98368652127L828.406000000001 4280.17592151142L813.687600000009 4252.52694025628L805.659400000011 4251.12109725145L801.199300000008 4219.72309624626L781.574800000002 4226.7525214114L766.85640000001 4264.7112281763L737.865700000001 4248.77792050624L693.264500000013 4246.43484883151L652.677500000011 4225.81529274151L631.715 4229.56431249156L614.766500000002 4249.24653484119L598.710100000006 4247.3720775014L563.92120000001 4258.15052241659L523.591400000001 4251.2002153219L480.963100000012 4235.65640391633L457.324500000013 4247.84069183635L423.873600000008 4246.43484883151L404.249100000002 4239.40542366637L371.244300000001 4209.4133707365L353.555200000003 4215.33955587543L316.895200000007 4204.2157442968" />
+    <path
+       id="way_end_150031078"
+       d="M317.088147368428 4204.27429067353L276.569200000012 4191.9795515603" />
+    <path
+       id="way_start_277233729"
+       d="M215.948300000009 2349.38220767791L216.045142105274 2344.66316067855" />
+    <path
+       id="way_mid_277233729"
+       d="M216.045142105274 2344.66316067855L216.132300000013 2340.41601837913L222.071900000004 2332.6140099842L229.454700000006 2328.13527575967L232.899600000011 2326.56793942909L232.931000000009 2325.41857346273L233.153300000013 2325.17649107984L233.721000000003 2325.01478761314L234.597900000012 2325.24457675002L235.067700000002 2325.61032708634L235.339100000005 2326.18506260476L235.725300000014 2326.4357607669L236.163800000001 2326.30000970844L236.42480000001 2325.66254711424L236.351700000001 2325.25508379789L236.550000000009 2324.87893148419L237.249400000011 2324.60721922631L238.303800000012 2324.83711343368L239.744400000007 2324.47136309737L240.120200000008 2323.57280036363L240.652600000005 2323.01897387047L241.393800000012 2322.71595060994L242.48990000001 2322.88311774153L243.081600000011 2323.2968852866L243.419800000013 2324.32405428624L243.7556 2324.99965746421L243.80260000001 2325.48550335766L244.389800000008 2325.73567616741L245.243100000011 2325.80775451579L246.918800000004 2324.33970978757L247.332200000003 2323.51217469743L248.409900000013 2322.81765883331L248.764200000011 2321.25126813703L249.207100000007 2319.75884705776L249.58190000001 2319.08208810454L250.151900000007 2318.53235936004L250.978700000005 2319.89186628378L251.023000000004 2322.2561621952L251.377300000002 2323.61556404846L251.436300000009 2324.85686668367L251.200100000006 2325.21147954924L251.524900000008 2325.65477189882L252.720700000012 2326.23108347442L254.403700000013 2326.29023815392L256.1015 2325.50704280579L256.633000000008 2323.98499185152L256.810100000011 2321.97541387615L257.061100000002 2321.48778178456L258.611200000005 2320.60109201492L259.825400000012 2318.46648016991L259.91400000001 2316.26472828901L258.758900000004 2315.17073446492L258.731300000009 2314.38543770721L260.705200000004 2313.33410249746L261.968400000001 2313.29228444694L262.855700000004 2313.60570968487L264.442500000002 2312.98926118641L265.956700000004 2312.38500086348L266.966100000005 2312.38678706162L267.806400000012 2312.23527543135L268.281400000007 2312.31365800845L269.132200000002 2312.95101553217L269.116600000004 2313.26444077009L269.320100000003 2313.63533955986L269.789900000007 2313.86523376723L270.390100000001 2313.79210471406L270.797300000013 2313.54655500537L271.108200000001 2313.2476294935L272.01430000001 2312.23779712284L273.446300000004 2312.41505102039L274.095900000007 2313.15390662652L274.863600000003 2312.76976895643L275.011200000009 2309.71106225137L276.738500000009 2308.52901936613L278.155800000008 2309.16438055076L281.282200000008 2309.34972487516L282.597500000009 2308.54520021985L282.931600000013 2306.58101269127L283.16120000001 2305.58851694959L284.413900000005 2304.84671937006L285.739700000008 2304.4496580311L286.43910000001 2303.54069331997L287.075900000006 2303.27948810995L288.641800000009 2303.84371658051L290.322500000003 2303.47807131468L291.569600000003 2302.66829313543L292.514700000013 2302.96606287203L293.224600000003 2303.24817710731L294.686000000013 2302.90344086674L295.327500000014 2300.27531298333L296.392300000009 2299.54402245166L297.394400000003 2299.79472061381L298.08340000001 2300.65146529703L300.213 2300.67237432229L300.964600000001 2300.10814585174L302.029400000009 2299.75300763377L302.927200000014 2300.08723682648L304.739300000009 2300.77271662943L305.850100000001 2300.19178195277L306.685300000013 2299.20968818848L308.146800000004 2299.35594629482L309.587400000013 2301.09023961603L311.195000000013 2301.34104284865L311.946600000014 2300.83954145388L310.92360000001 2296.07543580923L313.588200000013 2292.96650541536L315.271200000013 2291.81409240511L316.03890000001 2291.93229669364L317.527400000004 2292.37201664694L318.206500000003 2292.22428755391L319.136600000008 2291.20478869921L319.815700000007 2290.87980570863L321.631600000004 2291.08658441068L322.399300000001 2290.244444524L322.266400000004 2289.10684645125L322.384500000014 2287.57029577093L325.853900000013 2285.56103300699L327.3449 2282.72455036435L329.0279 2281.55742748709L330.068200000001 2279.62717772313L330.177100000001 2263.70952555438L325.173000000007 2264.21764638932L323.271600000014 2260.05853656096L321.293300000008 2258.25636771051L319.529800000013 2258.30459506023L317.149700000002 2257.34362046216L308.005000000009 2253.4581141603L302.827200000011 2249.73966991955L292.14110000001 2246.36753797656L282.243300000005 2243.93105864628L276.48090000001 2244.05630265687L270.109900000009 2241.35336459264L271.553600000005 2238.87601284615L272.263500000009 2233.3615989132L276.194500000003 2224.99220993336L285.747000000001 2217.82409173635L292.851900000003 2213.74452026036L291.670800000006 2198.69716686659L308.327200000009 2199.16578120153L311.613900000012 2208.09130822506L316.785000000011 2208.00819747642L320.145200000014 2192.98490522227L323.186400000012 2186.63539112471L332.781300000009 2174.85993243727L333.239300000003 2157.83326136598L337.48030000001 2151.43205259291L343.681700000006 2151.03362533773L346.533500000008 2148.33825234796L351.14010000001 2148.16835338393L351.691900000006 2151.78183221646L360.488800000014 2152.27934093305L363.794100000007 2151.0293174481L363.99800000001 2144.83120991034L359.084400000002 2140.47004955146L352.086600000008 2129.22141424415L348.642200000001 2125.16296193437L349.245200000014 2116.97839192654L354.330600000012 2110.62267867074L363.188600000001 2117.11729509936L370.245400000003 2112.5120560185L380.424900000009 2118.23293344207L383.756200000008 2115.68192729002L382.656000000013 2107.35645777027L385.091000000003 2089.31585657965L380.289000000005 2083.61798959091L383.715700000011 2078.58647957801L394.985500000005 2071.36729712836L394.653200000008 2063.2908446431L388.889200000009 2058.11307652387L396.942300000007 2053.69990627804L400.195300000008 2060.2648148569L403.275900000011 2066.71330534538L410.502500000008 2069.94369721263L413.148300000003 2071.35868134911L414.716200000002 2065.93704464884L415.003000000013 2056.23378594206L420.9994 2048.52949309232L417.161900000011 2043.3772570994L413.615400000012 2037.79885524493L414.344900000004 2032.45055773879L416.495900000002 2028.96389897403L417.216300000007 2020.53693137186L413.195700000003 2015.93831173116L401.764000000001 2019.48002742675L391.939400000013 2018.87019836845L383.734600000012 2007.55589401196L372.691400000009 2004.71594404352L371.244300000001 1996.09112872999L365.775100000008 1996.19546371532L361.843400000012 2002.04936036491L356.442200000004 2003.33552809452L350.852600000011 2000.0394671781L349.000200000007 1991.93695721413L347.543500000002 1983.7617384789L344.128000000012 1981.02002940803L342.097500000009 1980.11369145888L338.879400000012 1981.31937520181L328.544400000013 1977.79510120568L324.955000000004 1977.45509313665L321.056100000008 1977.17686650908L319.869480952391 1977.44254471948" />
+    <path
+       id="way_end_277233729"
+       d="M319.875726315799 1977.44114641311L318.564200000012 1977.73479075091" />
+    <path
+       id="way_start_277233735"
+       d="M318.564200000012 1977.73479075091L318.705252631586 1975.83439759297" />
+    <path
+       id="way_mid_277233735"
+       d="M318.705252631586 1975.83439759297L318.832200000003 1974.12404375082L318.182600000001 1968.9324063284L315.525300000005 1963.56393529035L312.122100000011 1956.4773517848L312.558700000011 1948.49977061999L313.932200000011 1947.18596935448L317.429300000002 1948.13486084751L323.337100000003 1948.32062545382L325.590400000011 1940.7729926878L329.599000000002 1936.26841112551L331.995300000003 1935.16968912988L356.448500000014 1927.00928533215L363.075700000011 1923.68989876946L367.116400000002 1905.88024249099L364.674500000007 1888.26790857151L359.520900000008 1880.97580720964L361.841000000013 1855.46154287L361.552200000006 1850.98060216542L358.890200000005 1851.85604939384L354.6099 1850.11072367236L353.344700000009 1849.86822100755L348.939400000007 1847.60657895381L346.417700000005 1844.62058101999L345.031700000008 1840.80158433114L343.2988 1836.13267254019L339.37370000001 1831.42225791016L338.6012 1827.73312833297L338.179900000001 1820.7684265827L336.326600000007 1815.13759455936L329.261800000013 1810.86437819115L328.927800000003 1806.77976333218L330.415300000013 1803.49557537985L332.241600000004 1801.74573162779L336.563400000004 1803.14190814859L340.829300000011 1803.57711007131L341.536800000001 1801.05531351233L345.508100000005 1792.15531861512L348.226500000011 1788.15654633724L350.424300000001 1784.68501772141L346.334900000003 1778.34947799752L345.581900000014 1775.47643082829L346.556300000004 1771.69000598783L344.194200000004 1770.70297391105L340.798700000008 1764.89825024549L338.539900000002 1762.92408102143L337.383900000007 1761.15280289172L338.419900000006 1757.73874782773L340.52340000001 1756.61375821242L343.462100000011 1751.87402891884L348.399600000008 1742.98233458944L351.677500000009 1740.29494695606L355.581700000002 1739.27418725561L358.128900000012 1737.75350221756L359.882600000007 1735.42030716784L361.970500000013 1733.79549728541L362.743000000009 1730.35832671611L363.180666666678 1729.47603489651" />
+    <path
+       id="way_end_277233735"
+       d="M363.178363157906 1729.48067853766L363.662100000014 1728.50551389494" />
+    <path
+       id="way_start_277372929"
+       d="M217.07570000001 3188.85887293375L217.700278947374 3174.49358178737" />
+    <path
+       id="way_mid_277372929"
+       d="M217.700278947374 3174.49358178737L218.262400000001 3161.56481975562L232.534700000003 3153.12955158564L228.966600000007 3115.63945915568L244.131000000011 3099.70615148562L243.239000000003 3076.27480431547L264.201500000013 3057.99842497068L241.901000000013 2985.82992612044L224.952500000001 2968.49077544554L227.59570000001 2957.03956425531L227.611366666673 2956.91362978157" />
+    <path
+       id="way_end_277372929"
+       d="M227.611284210533 2956.91429259459L227.628600000003 2956.77510186046" />
+    <path
+       id="way_start_277372933"
+       d="M150.641900000011 2830.9687540632L160.879373684218 2823.43564314334" />
+    <path
+       id="way_mid_277372933"
+       d="M160.879373684218 2823.43564314334L170.093100000004 2816.65584331546L179.90540000001 2824.15388281554L187.487600000012 2799.7853069755L219.154400000009 2775.8853454704L217.370300000013 2764.63828622027L198.637900000009 2763.23244321543L220.046400000002 2710.7462717853L216.478300000006 2676.53658477045L244.131000000011 2677.47381344034L236.994800000006 2684.50323860548L247.253100000009 2693.4071211104L285.610100000001 2685.44046727537L294.976300000002 2669.03854527036L286.056100000012 2660.13466276544L300.328500000007 2641.38956401522L275.35180000001 2632.4856815103L274.905800000014 2617.02098817518L298.098400000002 2602.49362858043L337.347400000013 2614.67791650045L337.79340000001 2588.90349765557L360.540000000001 2600.61906617017L375.258400000008 2599.21322316533L375.704400000004 2572.03285624513L405.141200000004 2565.94076482036L409.155300000009 2545.78982306531L417.629500000005 2537.35455489533L415.196800000004 2548.74030717733L412.723400000005 2560.31728773054L448.850300000005 2569.22117023546L449.679204761909 2552.69653591805" />
+    <path
+       id="way_end_277372933"
+       d="M449.674842105267 2552.78350767762L450.591000000003 2534.51943816891" />
+    <path
+       id="way_start_277372936"
+       d="M 9.09494701772928e-13 3621.50894894089L1.963631578952357 3620.65234803832" />
+    <path
+       id="way_mid_277372936"
+       d="M1.963631578952357 3620.65234803832L3.73090000000866 3619.88140722602L16.2192000000096 3625.0362699809L58.9229000000141 3618.04183328516L63.5459000000092 3597.82049430939L68.5161000000107 3597.59301672303L84.2901000000047 3600.86900917802L88.7138000000086 3609.23146350627L108.714000000006 3608.00508087903L131.290100000001 3608.16573364094L133.966200000004 3588.95202055578L143.778500000011 3580.04813805086L154.468000000009 3575.93578458551L162.6093 3570.60503384931L179.90540000001 3572.55009855077L180.351400000007 3544.90122236611L166.525000000008 3542.08943128596L156.266800000012 3522.87571820079L185.066300000003 3522.39586132463L202.94220000001 3504.52946698767L225.685200000002 3504.46390300897L229.4129 3493.64868342625L226.262600000013 3491.04818907873L229.528000000002 3489.06929168314L231.945800000006 3484.20022063029L230.70820000001 3478.38572541021L222.363900000006 3479.05176717461L222.957100000002 3473.63349272966L218.363000000011 3469.76689911396L219.970600000011 3463.87790892449L222.532300000013 3460.13960636328L228.145200000001 3457.35765529907L228.979900000014 3455.56095011352L228.951100000004 3452.28642864523L231.512900000013 3450.05515195982L233.441400000004 3447.85287472654L233.614100000012 3446.02727515934L235.513800000007 3442.57907218978L235.542600000003 3440.23200783686L237.327200000011 3438.95697757799L235.268700000007 3434.88591681077L227.010200000011 3431.96338144608L219.53880000001 3436.55201939132L218.444100000014 3440.0869055058L208.896100000004 3448.83276201077L197.745800000007 3446.48969033604L203.025300000008 3437.15491379803L195.729900000004 3431.42079749414L192.839800000002 3430.84711268051L189.135500000007 3429.78169802662L185.716100000008 3426.21676175524L183.887500000012 3425.32177141778L183.034500000005 3417.29638318516L194.508700000001 3414.17032630325L205.703 3414.17032630325L207.910400000003 3408.5538889355L217.63 3405.68903726361L226.290600000014 3410.40544091093L234.767400000011 3390.12042922507L234.523200000013 3378.64967492581L236.314300000005 3374.22536720925L235.662900000009 3370.4975716959L236.194800000007 3368.08641435098L220.031700000008 3366.64694879296L214.169900000003 3362.05915141156L207.8463 3361.90091527066L204.204100000013 3371.0925858167L198.722100000013 3369.88879334238L197.002800000007 3365.77381311507L188.379600000006 3365.88592331583L190.450900000003 3353.61642323759L195.748200000012 3343.42353610013L204.111500000011 3328.11644848304L206.807400000003 3315.97996763083L202.578900000007 3312.84781666116L200.906100000012 3297.5617431398L203.553600000007 3291.75418257132L228.06390000001 3298.82321930693L238.0335 3297.98244533647L237.568800000006 3294.00910011443L240.589200000003 3291.06428980826L236.778900000005 3289.6620191997L237.568800000006 3286.10958631528L237.803400000004 3275.35982564078L229.483500000001 3273.9102733168L229.211700000008 3267.40788167276L226.188800000003 3263.40910939488L226.15590000001 3254.22195687941L221.384400000005 3251.07246928076L220.471600000011 3246.09275901385L223.593100000003 3243.97790041883L222.870200000004 3240.24390574724L227.536000000001 3229.07533414469L224.952500000001 3218.73723960568L223.921600000011 3202.90774156856L224.050800000001 3189.9565442246L220.729323809529 3189.43384360991" />
+    <path
+       id="way_end_277372936"
+       d="M220.746805263163 3189.43659466578L217.07570000001 3188.85887293375" />
+  </defs>
+  <clipPath
+     id="map-clipping">
+    <rect
+       id="map-clipping-rect"
+       x="0px"
+       y="0px"
+       height="4297.98368652127px"
+       width="4559.29160000001px" />
+  </clipPath>
+  <g
+     id="map"
+     clip-path="url(#map-clipping)"
+     inkscape:groupmode="layer"
+     inkscape:label="Map"
+     transform="translate(0,0)">
+    <rect
+       id="background"
+       x="0px"
+       y="0px"
+       height="4297.98368652127px"
+       width="4559.29160000001px"
+       class="map-background" />
+    <use
+       xlink:href="#way_mid_45673237"
+       class="state-stroke osmarender-stroke-linecap-butt osmarender-no-marker-start osmarender-no-marker-end"
+       id="use218" />
+    <use
+       xlink:href="#way_start_45673237"
+       class="state-stroke   osmarender-stroke-linecap-round osmarender-no-marker-end"
+       id="use220" />
+    <use
+       xlink:href="#way_end_45673237"
+       class="state-stroke  osmarender-stroke-linecap-round osmarender-no-marker-start"
+       id="use222" />
+    <use
+       xlink:href="#way_mid_45673396"
+       class="state-stroke osmarender-stroke-linecap-butt osmarender-no-marker-start osmarender-no-marker-end"
+       id="use224" />
+    <use
+       xlink:href="#way_start_45673396"
+       class="state-stroke   osmarender-stroke-linecap-round osmarender-no-marker-end"
+       id="use226" />
+    <use
+       xlink:href="#way_end_45673396"
+       class="state-stroke  osmarender-stroke-linecap-round osmarender-no-marker-start"
+       id="use228" />
+    <use
+       xlink:href="#way_mid_45674216"
+       class="state-stroke osmarender-stroke-linecap-butt osmarender-no-marker-start osmarender-no-marker-end"
+       id="use230" />
+    <use
+       xlink:href="#way_start_45674216"
+       class="state-stroke   osmarender-stroke-linecap-round osmarender-no-marker-end"
+       id="use232" />
+    <use
+       xlink:href="#way_end_45674216"
+       class="state-stroke  osmarender-stroke-linecap-round osmarender-no-marker-start"
+       id="use234" />
+    <use
+       xlink:href="#way_mid_45674480"
+       class="state-stroke osmarender-stroke-linecap-butt osmarender-no-marker-start osmarender-no-marker-end"
+       id="use236" />
+    <use
+       xlink:href="#way_start_45674480"
+       class="state-stroke   osmarender-stroke-linecap-round osmarender-no-marker-end"
+       id="use238" />
+    <use
+       xlink:href="#way_end_45674480"
+       class="state-stroke  osmarender-stroke-linecap-round osmarender-no-marker-start"
+       id="use240" />
+    <use
+       xlink:href="#way_mid_45674572"
+       class="state-stroke osmarender-stroke-linecap-butt osmarender-no-marker-start osmarender-no-marker-end"
+       id="use242" />
+    <use
+       xlink:href="#way_start_45674572"
+       class="state-stroke   osmarender-stroke-linecap-round osmarender-no-marker-end"
+       id="use244" />
+    <use
+       xlink:href="#way_end_45674572"
+       class="state-stroke  osmarender-stroke-linecap-round osmarender-no-marker-start"
+       id="use246" />
+    <use
+       xlink:href="#way_mid_145690824"
+       class="state-stroke osmarender-stroke-linecap-butt osmarender-no-marker-start osmarender-no-marker-end"
+       id="use248" />
+    <use
+       xlink:href="#way_start_145690824"
+       class="state-stroke   osmarender-stroke-linecap-round osmarender-no-marker-end"
+       id="use250" />
+    <use
+       xlink:href="#way_end_145690824"
+       class="state-stroke  osmarender-stroke-linecap-round osmarender-no-marker-start"
+       id="use252" />
+    <use
+       xlink:href="#way_mid_146058061"
+       class="state-stroke osmarender-stroke-linecap-butt osmarender-no-marker-start osmarender-no-marker-end"
+       id="use254" />
+    <use
+       xlink:href="#way_start_146058061"
+       class="state-stroke   osmarender-stroke-linecap-round osmarender-no-marker-end"
+       id="use256" />
+    <use
+       xlink:href="#way_end_146058061"
+       class="state-stroke  osmarender-stroke-linecap-round osmarender-no-marker-start"
+       id="use258" />
+    <use
+       xlink:href="#way_mid_146058105"
+       class="state-stroke osmarender-stroke-linecap-butt osmarender-no-marker-start osmarender-no-marker-end"
+       id="use260" />
+    <use
+       xlink:href="#way_start_146058105"
+       class="state-stroke   osmarender-stroke-linecap-round osmarender-no-marker-end"
+       id="use262" />
+    <use
+       xlink:href="#way_end_146058105"
+       class="state-stroke  osmarender-stroke-linecap-round osmarender-no-marker-start"
+       id="use264" />
+    <use
+       xlink:href="#way_mid_146058114"
+       class="state-stroke osmarender-stroke-linecap-butt osmarender-no-marker-start osmarender-no-marker-end"
+       id="use266" />
+    <use
+       xlink:href="#way_start_146058114"
+       class="state-stroke   osmarender-stroke-linecap-round osmarender-no-marker-end"
+       id="use268" />
+    <use
+       xlink:href="#way_end_146058114"
+       class="state-stroke  osmarender-stroke-linecap-round osmarender-no-marker-start"
+       id="use270" />
+    <use
+       xlink:href="#way_mid_147054605"
+       class="state-stroke osmarender-stroke-linecap-butt osmarender-no-marker-start osmarender-no-marker-end"
+       id="use272" />
+    <use
+       xlink:href="#way_start_147054605"
+       class="state-stroke   osmarender-stroke-linecap-round osmarender-no-marker-end"
+       id="use274" />
+    <use
+       xlink:href="#way_end_147054605"
+       class="state-stroke  osmarender-stroke-linecap-round osmarender-no-marker-start"
+       id="use276" />
+    <use
+       xlink:href="#way_mid_147238874"
+       class="state-stroke osmarender-stroke-linecap-butt osmarender-no-marker-start osmarender-no-marker-end"
+       id="use278" />
+    <use
+       xlink:href="#way_start_147238874"
+       class="state-stroke   osmarender-stroke-linecap-round osmarender-no-marker-end"
+       id="use280" />
+    <use
+       xlink:href="#way_end_147238874"
+       class="state-stroke  osmarender-stroke-linecap-round osmarender-no-marker-start"
+       id="use282" />
+    <use
+       xlink:href="#way_mid_147238879"
+       class="state-stroke osmarender-stroke-linecap-butt osmarender-no-marker-start osmarender-no-marker-end"
+       id="use284" />
+    <use
+       xlink:href="#way_start_147238879"
+       class="state-stroke   osmarender-stroke-linecap-round osmarender-no-marker-end"
+       id="use286" />
+    <use
+       xlink:href="#way_end_147238879"
+       class="state-stroke  osmarender-stroke-linecap-round osmarender-no-marker-start"
+       id="use288" />
+    <use
+       xlink:href="#way_mid_147426506"
+       class="state-stroke osmarender-stroke-linecap-butt osmarender-no-marker-start osmarender-no-marker-end"
+       id="use290" />
+    <use
+       xlink:href="#way_start_147426506"
+       class="state-stroke   osmarender-stroke-linecap-round osmarender-no-marker-end"
+       id="use292" />
+    <use
+       xlink:href="#way_end_147426506"
+       class="state-stroke  osmarender-stroke-linecap-round osmarender-no-marker-start"
+       id="use294" />
+    <use
+       xlink:href="#way_mid_147427262"
+       class="state-stroke osmarender-stroke-linecap-butt osmarender-no-marker-start osmarender-no-marker-end"
+       id="use296" />
+    <use
+       xlink:href="#way_start_147427262"
+       class="state-stroke   osmarender-stroke-linecap-round osmarender-no-marker-end"
+       id="use298" />
+    <use
+       xlink:href="#way_end_147427262"
+       class="state-stroke  osmarender-stroke-linecap-round osmarender-no-marker-start"
+       id="use300" />
+    <use
+       xlink:href="#way_mid_149935006"
+       class="state-stroke osmarender-stroke-linecap-butt osmarender-no-marker-start osmarender-no-marker-end"
+       id="use302" />
+    <use
+       xlink:href="#way_start_149935006"
+       class="state-stroke   osmarender-stroke-linecap-round osmarender-no-marker-end"
+       id="use304" />
+    <use
+       xlink:href="#way_end_149935006"
+       class="state-stroke  osmarender-stroke-linecap-round osmarender-no-marker-start"
+       id="use306" />
+    <use
+       xlink:href="#way_mid_149936226"
+       class="state-stroke osmarender-stroke-linecap-butt osmarender-no-marker-start osmarender-no-marker-end"
+       id="use308" />
+    <use
+       xlink:href="#way_start_149936226"
+       class="state-stroke   osmarender-stroke-linecap-round osmarender-no-marker-end"
+       id="use310" />
+    <use
+       xlink:href="#way_end_149936226"
+       class="state-stroke  osmarender-stroke-linecap-round osmarender-no-marker-start"
+       id="use312" />
+    <use
+       xlink:href="#way_mid_149936228"
+       class="state-stroke osmarender-stroke-linecap-butt osmarender-no-marker-start osmarender-no-marker-end"
+       id="use314" />
+    <use
+       xlink:href="#way_start_149936228"
+       class="state-stroke   osmarender-stroke-linecap-round osmarender-no-marker-end"
+       id="use316" />
+    <use
+       xlink:href="#way_end_149936228"
+       class="state-stroke  osmarender-stroke-linecap-round osmarender-no-marker-start"
+       id="use318" />
+    <use
+       xlink:href="#way_mid_150019123"
+       class="state-stroke osmarender-stroke-linecap-butt osmarender-no-marker-start osmarender-no-marker-end"
+       id="use320" />
+    <use
+       xlink:href="#way_start_150019123"
+       class="state-stroke   osmarender-stroke-linecap-round osmarender-no-marker-end"
+       id="use322" />
+    <use
+       xlink:href="#way_end_150019123"
+       class="state-stroke  osmarender-stroke-linecap-round osmarender-no-marker-start"
+       id="use324" />
+    <use
+       xlink:href="#way_mid_150019153"
+       class="state-stroke osmarender-stroke-linecap-butt osmarender-no-marker-start osmarender-no-marker-end"
+       id="use326" />
+    <use
+       xlink:href="#way_start_150019153"
+       class="state-stroke   osmarender-stroke-linecap-round osmarender-no-marker-end"
+       id="use328" />
+    <use
+       xlink:href="#way_end_150019153"
+       class="state-stroke  osmarender-stroke-linecap-round osmarender-no-marker-start"
+       id="use330" />
+    <use
+       xlink:href="#way_mid_150022985"
+       class="state-stroke osmarender-stroke-linecap-butt osmarender-no-marker-start osmarender-no-marker-end"
+       id="use332" />
+    <use
+       xlink:href="#way_start_150022985"
+       class="state-stroke   osmarender-stroke-linecap-round osmarender-no-marker-end"
+       id="use334" />
+    <use
+       xlink:href="#way_end_150022985"
+       class="state-stroke  osmarender-stroke-linecap-round osmarender-no-marker-start"
+       id="use336" />
+    <use
+       xlink:href="#way_mid_150023065"
+       class="state-stroke osmarender-stroke-linecap-butt osmarender-no-marker-start osmarender-no-marker-end"
+       id="use338" />
+    <use
+       xlink:href="#way_start_150023065"
+       class="state-stroke   osmarender-stroke-linecap-round osmarender-no-marker-end"
+       id="use340" />
+    <use
+       xlink:href="#way_end_150023065"
+       class="state-stroke  osmarender-stroke-linecap-round osmarender-no-marker-start"
+       id="use342" />
+    <use
+       xlink:href="#way_mid_150030112"
+       class="state-stroke osmarender-stroke-linecap-butt osmarender-no-marker-start osmarender-no-marker-end"
+       id="use344" />
+    <use
+       xlink:href="#way_start_150030112"
+       class="state-stroke   osmarender-stroke-linecap-round osmarender-no-marker-end"
+       id="use346" />
+    <use
+       xlink:href="#way_end_150030112"
+       class="state-stroke  osmarender-stroke-linecap-round osmarender-no-marker-start"
+       id="use348" />
+    <use
+       xlink:href="#way_mid_150030118"
+       class="state-stroke osmarender-stroke-linecap-butt osmarender-no-marker-start osmarender-no-marker-end"
+       id="use350" />
+    <use
+       xlink:href="#way_start_150030118"
+       class="state-stroke   osmarender-stroke-linecap-round osmarender-no-marker-end"
+       id="use352" />
+    <use
+       xlink:href="#way_end_150030118"
+       class="state-stroke  osmarender-stroke-linecap-round osmarender-no-marker-start"
+       id="use354" />
+    <use
+       xlink:href="#way_mid_150031078"
+       class="state-stroke osmarender-stroke-linecap-butt osmarender-no-marker-start osmarender-no-marker-end"
+       id="use356" />
+    <use
+       xlink:href="#way_start_150031078"
+       class="state-stroke   osmarender-stroke-linecap-round osmarender-no-marker-end"
+       id="use358" />
+    <use
+       xlink:href="#way_end_150031078"
+       class="state-stroke  osmarender-stroke-linecap-round osmarender-no-marker-start"
+       id="use360" />
+    <use
+       xlink:href="#way_mid_277233729"
+       class="state-stroke osmarender-stroke-linecap-butt osmarender-no-marker-start osmarender-no-marker-end"
+       id="use362" />
+    <use
+       xlink:href="#way_start_277233729"
+       class="state-stroke   osmarender-stroke-linecap-round osmarender-no-marker-end"
+       id="use364" />
+    <use
+       xlink:href="#way_end_277233729"
+       class="state-stroke  osmarender-stroke-linecap-round osmarender-no-marker-start"
+       id="use366" />
+    <use
+       xlink:href="#way_mid_277233735"
+       class="state-stroke osmarender-stroke-linecap-butt osmarender-no-marker-start osmarender-no-marker-end"
+       id="use368" />
+    <use
+       xlink:href="#way_start_277233735"
+       class="state-stroke   osmarender-stroke-linecap-round osmarender-no-marker-end"
+       id="use370" />
+    <use
+       xlink:href="#way_end_277233735"
+       class="state-stroke  osmarender-stroke-linecap-round osmarender-no-marker-start"
+       id="use372" />
+    <use
+       xlink:href="#way_mid_277372929"
+       class="state-stroke osmarender-stroke-linecap-butt osmarender-no-marker-start osmarender-no-marker-end"
+       id="use374" />
+    <use
+       xlink:href="#way_start_277372929"
+       class="state-stroke   osmarender-stroke-linecap-round osmarender-no-marker-end"
+       id="use376" />
+    <use
+       xlink:href="#way_end_277372929"
+       class="state-stroke  osmarender-stroke-linecap-round osmarender-no-marker-start"
+       id="use378" />
+    <use
+       xlink:href="#way_mid_277372933"
+       class="state-stroke osmarender-stroke-linecap-butt osmarender-no-marker-start osmarender-no-marker-end"
+       id="use380" />
+    <use
+       xlink:href="#way_start_277372933"
+       class="state-stroke   osmarender-stroke-linecap-round osmarender-no-marker-end"
+       id="use382" />
+    <use
+       xlink:href="#way_end_277372933"
+       class="state-stroke  osmarender-stroke-linecap-round osmarender-no-marker-start"
+       id="use384" />
+    <use
+       xlink:href="#way_mid_277372936"
+       class="state-stroke osmarender-stroke-linecap-butt osmarender-no-marker-start osmarender-no-marker-end"
+       id="use386" />
+    <use
+       xlink:href="#way_start_277372936"
+       class="state-stroke   osmarender-stroke-linecap-round osmarender-no-marker-end"
+       id="use388" />
+    <use
+       xlink:href="#way_end_277372936"
+       class="state-stroke  osmarender-stroke-linecap-round osmarender-no-marker-start"
+       id="use390" />
+  </g>
+  <g
+     id="map-decoration"
+     inkscape:groupmode="layer"
+     inkscape:label="Map decoration"
+     transform="translate(0,0)" />
+ 
+  <g
+     id="staticElements"
+     transform="scale(1) translate(0,0)" />
+</svg>
